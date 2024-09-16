@@ -1,122 +1,66 @@
-<header class="header">
-	<div class="container-fluid">
-		<div class="row align-items-center">
-			<div class="col-md-12">
-				<div class="topbar">
-					<div class="cllml">
-						<ul>
-                            <li>
-                                <a href="tel:{{ businessSetting(1)->phone }}">
+<div class="container-fluid border-bottom bg-light wow fadeIn" data-wow-delay="0.1s">
+    <div class="container topbar bg-primary d-none d-lg-block py-2" style="border-radius: 0 40px">
+        <div class="d-flex justify-content-between">
+            <div class="top-info ps-2">
+                <small class="me-3">
+                    <i class="fas fa-map-marker-alt me-2" style="color: white;"></i>
+                    <a href="#" class="text-white">Y-18-A, Sudarshana Nagar, Bikaner (Rajasthan), 334003</a>
+                </small>
 
-                                    <img src="{{ asset('images/phone.png') }}" alt="Phone Icon"> Call: {{ businessSetting(1)->contact_numbers }}
-                                </a>
-                            </li>
+                    <small class="me-3">
+                        <i class="fas fa-envelope me-2" style="color: white;"></i>
+                        <a href="mailto:contact@auricletechnologies.com" class="text-white">contact@auricletechnologies.com</a>
+                    </small>
 
-							<li>
-                                <a href="mailto:{{ businessSetting(1)->email }}">
-                                    <img src="{{ asset('images/mail.png') }}" alt="Phone Icon"> Email: {{ businessSetting(1)->email }}
-                                </a>
-                            </li>
-
-						</ul>
-					</div>
-					<div class="azd_logo">
-						<ul>
-							<li><a href="#"><img src="{{ asset('images/g20.png') }}" alt="g20"></a></li>
-							<li><a href="#"><img src="{{ asset('images/azadi.png') }}" alt="azadi"></a></li>
-						</ul>
-					</div>
-				</div>
-			</div>
-			<div class="main_head" id="myHeader">
-				<div class="row">
-					<div class="col-lg-2 col-md-3">
-						<div class="logo">
-                            <a href="{{ url('/') }}">
-                                <img src="{{ asset(businessSetting(1)->header_logo) }}" alt="logo">
-                            </a>
+            </div>
+            <div class="top-link pe-2">
+                <a href="" class="btn btn-light btn-sm-square rounded-circle"><i class="fab fa-facebook-f text-secondary"></i></a>
+                <a href="" class="btn btn-light btn-sm-square rounded-circle"><i class="fab fa-twitter text-secondary"></i></a>
+                <a href="" class="btn btn-light btn-sm-square rounded-circle"><i class="fab fa-instagram text-secondary"></i></a>
+                <a href="" class="btn btn-light btn-sm-square rounded-circle me-0"><i class="fab fa-linkedin-in text-secondary"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="container px-0">
+        <nav class="navbar navbar-light navbar-expand-xl py-3">
+            <a href="index.html" class="navbar-brand"><h1 class="text-primary display-6">Event<span class="text-secondary">On</span></h1></a>
+            <button class="navbar-toggler py-2 px-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="fa fa-bars text-primary"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav mx-auto">
+                    <a href="/" class="nav-item nav-link active">Home</a>
+                    <a href="about.html" class="nav-item nav-link">About</a>
+                    <a href="participate" class="nav-item nav-link">Services</a>
+                    <a href="program.html" class="nav-item nav-link">Programs</a>
+                    <a href="event.html" class="nav-item nav-link">Events</a>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
+                        <div class="dropdown-menu m-0 bg-secondary rounded-0">
+                            <a href="blog.html" class="dropdown-item">Our Blog</a>
+                            <a href="team.html" class="dropdown-item">Our Team</a>
+                            <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+                            <a href="404.html" class="dropdown-item">404 Page</a>
                         </div>
-
-					</div>
-					<div class="col-lg-10 col-md-9">
-						<div class="desk_menus">
-							<h4>Rajasthan Institute of Cooperative Education and Management</h4>
-							<nav class="navbar navbar-expand-lg navbar-light">
-								<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-									<span class="navbar-toggler-icon"></span>
-								</button>
-								<div class="collapse navbar-collapse" id="navbarSupportedContent">
-									<ul class="navbar-nav me-auto mb-2 mb-lg-0">
-										<li class="nav-item"><a class="nav-link active" href="{{ route('home') }}">Home</a></li>
-										<li class="nav-item dropdown">
-											<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-												About us
-											</a>
-											<ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-												@foreach (App\Models\Page::where('parent_id', 1)->orderBy('position')->get(); as $page)
-                                                    <li><a class="dropdown-item" href="{{ route('page', $page->slug) }}">{{ $page->name }}</a></li>
-                                                @endforeach
-											</ul>
-										</li>
-										 {{-- <li class="nav-item"><a class="nav-link" href="/infastructure">Infrastructure</a></li> --}}
-										<li class="nav-item dropdown">
-											<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-												Our Team
-											</a>
-											<ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-												<li><a class="dropdown-item" href="{{route('boardofdirectory')}}">Board Of Directors</a></li>
-												<li><a class="dropdown-item" href="{{route('teamofmember')}}">Team Member</a></li>
-											</ul>
-										</li>
-                                        <li class="nav-item dropdown">
-											<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-												Training
-											</a>
-											<ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-												<li><a class="dropdown-item" href="{{route('traningprogramme')}}">Training Calender</a></li>
-												<li><a class="dropdown-item" href="{{route('studymaterial')}}">Study Material</a></li>
-                                                <li><a class="dropdown-item" href="{{route('relivingorders')}}">Reliving Orders</a></li>
-                                                {{-- <li><a class="dropdown-item" href="{{route('feedback')}}">Feedback/Suggestions</a></li> --}}
-											</ul>
-										</li>
-
-										<li class="nav-item"><a class="nav-link" href="/room">Rooms</a></li>
-
-										<li class="nav-item"><a class="nav-link" href="{{route('gallery')}}">Gallery</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="{{route('tenders')}}">Tenders</a></li>
-										<li class="nav-item"><a class="nav-link" href="{{route('placementservice')}}">Placement Services</a></li>
-										<li class="nav-item"><a class="nav-link" href="{{route('contact-us')}}">Contact Us</a></li>
-									</ul>
-								</div>
-							</nav>
-						</div>
-						<div class="mob_menus">
-							<div class="header"></div>
-							  <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu">
-							  <label for="openSidebarMenu" class="sidebarIconToggle">
-								<div class="spinner diagonal part-1"></div>
-								<div class="spinner horizontal"></div>
-								<div class="spinner diagonal part-2"></div>
-							  </label>
-							  <div id="sidebarMenu">
-								<ul class="sidebarMenuInner">
-									<li class="nav-item"><a class="nav-link" href="{{ route('home') }}">Home</a></li>
-									<li class="nav-item"><a class="nav-link" href="#">about Us</a></li>
-									<li class="nav-item"><a class="nav-link" href="#">Infrastructure</a></li>
-									<li class="nav-item"><a class="nav-link" href="#">Our Team</a></li>
-									<li class="nav-item"><a class="nav-link" href="#">Training</a></li>
-									<li class="nav-item"><a class="nav-link" href="#">Rooms</a></li>
-									<li class="nav-item"><a class="nav-link" href="{{ route('gallery') }}">Photo Gallery</a></li>
-				                    <li class="nav-item"><a class="nav-link" href="{{route('contact-us')}}">Contact Us</a></li>
-                                   <li class="nav-item"><a class="nav-link" href="{{ route('placementservice') }}">Placement Service</a></li>
-								</ul>
-							  </div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</header>
-
-
+                    </div>
+                    <a href="contact" class="nav-item nav-link">Contact</a>
+                </div>
+                <div class="d-flex me-4">
+                    <div id="phone-tada" class="d-flex align-items-center justify-content-center">
+                        <a href="" class="position-relative wow tada" data-wow-delay=".9s" >
+                            <i class="fa fa-phone-alt text-primary fa-2x me-4"></i>
+                            <div class="position-absolute" style="top: -7px; left: 20px;">
+                                <span><i class="fa fa-comment-dots text-secondary"></i></span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="d-flex flex-column pe-3 border-end border-primary">
+                        <span class="text-primary">Have any questions?</span>
+                        <a href="#"><span class="text-secondary"></span></a>
+                    </div>
+                </div>
+                {{-- <button class="btn-search btn btn-primary btn-md-square rounded-circle" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fas fa-search text-white"></i></button> --}}
+            </div>
+        </nav>
+    </div>
+</div>

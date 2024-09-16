@@ -1,100 +1,97 @@
 @extends('backend.layouts.app')
 
-@section('meta_title', __('Contacts'))
+@section('meta_title', __('Contact Table'))
 
-@section('page_name', __('Contacts'))
+@section('page_name', __('Contact Table'))
 
-@section('page_description', __('List of Contacts'))
+@section('page_description', __('This is the contact table page displaying all records.'))
 
 @section('name')
     <li class="breadcrumb-item">
         <a href="{{ route('dashboard') }}"> <i class="feather icon-home"></i> </a>
     </li>
-    <li class="breadcrumb-item"><a href="#!">{{ __('Contacts') }}</a></li>
+    <li class="breadcrumb-item"><a href="#!">{{ __('Sample') }}</a></li>
 @endsection
 
 @section('content')
-<div class="row">
-    <div class="col-sm-12">
-        <div class="card">
-            <div class="card-block">
-                <div class="dt-responsive table-responsive">
-                    <table id="contact-table" class="table table-striped table-bordered nowrap">
-                        <thead>
-                            <tr>
-                                <th>#</th>
-                                <th>{{ __('First Name') }}</th>
-                                <th>{{ __('Last Name') }}</th>
-                                <th>{{ __('Phone') }}</th>
-                                <th>{{ __('Email') }}</th>
-                                <th>{{ __('Message') }}</th>
-                                <th>{{ __('Actions') }}</th> <!-- Added Actions column -->
-                            </tr>
-                        </thead>
-                        <tbody>
-                            @foreach ($contacts as $key => $contact)
-                            <tr>
-                                <td>{{ $contact->id }}</td>
-                                <td>{{ $contact->first_name }}</td>
-                                <td>{{ $contact->last_name }}</td>
-                                <td>{{ $contact->number }}</td>
-                                <td>{{ $contact->email }}</td>
-                                <td>{{ $contact->message }}</td>
-                                <td>
-                                    <form action="{{ route('contacts.delete', encrypt($contact->id)) }}" method="POST">
-                                        @csrf
-                                        @method('DELETE')
-                                        <button type="submit" class="btn btn-sm btn-danger" onclick="return confirm('Are you sure you want to delete this contact?')">
-                                            {{ __('Delete') }}
-                                        </button>
-                                    </form>
-                                </td>
-                            </tr>
-                            @endforeach
-                        </tbody>
-                        <tfoot>
-                            <tr>
-                                <th>#</th>
-                                <th>{{ __('First Name') }}</th>
-                                <th>{{ __('Last Name') }}</th>
-                                <th>{{ __('Phone') }}</th>
-                                <th>{{ __('Email') }}</th>
-                                <th>{{ __('Message') }}</th>
-                                <th>{{ __('Actions') }}</th>
-                            </tr>
-                        </tfoot>
-                    </table>
-                </div>
-                <div class="row">
-                    <div class="col-xs-12 col-sm-12 col-md-5">
-                        <div class="dataTables_info" id="contact-table_info" role="status" aria-live="polite">
-                            Showing {{ $contacts->firstItem() }} to {{ $contacts->lastItem() }} of {{ $contacts->total() }} entries
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-12 col-md-7">
-                        <div class="float-sm-right">
-                            {{ $contacts->appends(request()->input())->links() }}
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <!-- Add Bootstrap CSS for styling and responsiveness -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .table-container {
+            margin: 20px;
+        }
+        .table th, .table td {
+            text-align: center;
+        }
+    </style>
+
+    <div class="container table-container">
+        <h3 class="my-4">Contact Table</h3>
+        <table class="table table-striped table-bordered">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Message</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach ($samples as $sample)
+                    <tr>
+                        <td>{{ $loop->iteration }}</td>
+                        <td>{{ $sample->name }}</td>
+                        <td>{{ $sample->email }}</td>
+                        <td>{{ $sample->message }}</td>
+                        <td>
+                            <!-- Delete Button Triggering Modal -->
+                            <button type="button" class="btn btn-sm" style="background-color: #800000; color: #fff; border-color: #800000;" data-bs-toggle="modal" data-bs-target="#deleteModal{{ $sample->id }}">
+                                Delete
+                            </button>
+
+
+                            <!-- Delete Confirmation Modal -->
+                            <div class="modal fade" id="deleteModal{{ $sample->id }}" tabindex="-1" aria-labelledby="deleteModalLabel{{ $sample->id }}" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content rounded-0">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="deleteModalLabel{{ $sample->id }}">Confirm Deletion</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            Are you sure you want to delete this item? This action cannot be undone.
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                                            <form action="{{ route('contacts.delete', $sample->id) }}" method="POST">
+                                                @csrf
+                                                @method('DELETE')
+                                                <button type="submit" class="btn btn-danger">Delete</button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                @endforeach
+            </tbody>
+        </table>
     </div>
-</div>
+
+    <!-- Add Bootstrap JS for any interactive components -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 @endsection
 
 @section('modal')
-
+    <!-- Place for modals if needed -->
 @endsection
 
 @section('scripts')
-<script>
-    // Any additional scripts can be added here
-</script>
+    <!-- Place for additional scripts if needed -->
 @endsection
 
 @section('styles')
-<style>
-    /* Any additional styles can be added here */
-</style>
+    <!-- Place for additional styles if needed -->
 @endsection

@@ -12,14 +12,14 @@ class ContactController extends Controller
 
     public function index()
     {
-        $contacts = Contact::paginate(10); // Example: Paginate with 10 contacts per page
+        $samples = Contact::paginate(15); // Example: Paginate with 10 contacts per page
 
-        return view('backend.contact.index', compact('contacts'));
+        return view('backend.contact.index', compact('samples'));
     }
 
     public function delete(Request $request, $id)
     {
-        $contact = Contact::find(decrypt($id));
+        $contact = Contact::find(($id));
 
         if (!$contact) {
             return redirect()->back()->with('error', 'Contact not found.');
