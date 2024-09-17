@@ -114,8 +114,8 @@ document.addEventListener('DOMContentLoaded', function () {
         flashMessage.style.opacity = '0'; // Fade out
         setTimeout(function () {
           flashMessage.style.display = 'none'; // Hide completely after fade out
-        }, 500); // Wait for fade-out transition (0.5s)
-      }, 5000); // Adjust the time (5000ms = 5 seconds)
+        }, 150); // Wait for fade-out transition (0.5s)
+      }, 1500); // Adjust the time (5000ms = 5 seconds)
     }
   });
 

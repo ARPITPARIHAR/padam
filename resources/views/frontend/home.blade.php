@@ -158,43 +158,8 @@
                 </div>
             </div>
         </div>
-        <style>
-            .service-item {
-                transition: transform 0.3s ease !important;
-                /* Other styles for .service-item */
-            }
-
-            .service-item:hover {
-                transform: scale(1.05) !important; /* Slightly enlarges the item */
-                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2) !important; /* Adds a shadow */
-            }
-        </style>
-
+       
         <!-- Service End -->
-        <div class="container-fluid service py-5">
-            <div class="container py-5">
-                <div class="mx-auto text-center wow fadeIn" data-wow-delay="0.1s" style="max-width: 700px;">
-                    <h4 class="text-primary mb-4 border-bottom border-primary border-2 d-inline-block p-2 title-border-radius">What We Offer</h4>
-                    <h5 style="font-size: 2.1rem; line-height: 1.3; font-weight: 500; margin-bottom: 3rem;">
-                        Get Involved and Earn Rewards with Our Platform
-                    </h5>
-                </div>
-                <div class="row g-5">
-                    <div class="col-md-6 col-lg-6 col-xl-3 wow fadeIn" data-wow-delay="0.1s">
-                        <div class="text-center border-primary border bg-white service-item">
-                            <div class="service-content d-flex align-items-center justify-content-center p-4">
-                                <div class="service-content-inner">
-                                    <div class="p-4"><i class="fas fa-trophy fa-6x text-primary"></i></div>
-                                    <a href="#" class="h4">Participate in Competitions</a>
-                                    <p class="my-3">Join various gaming competitions and showcase your skills to win exciting rewards and recognition.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Add other service items similarly -->
-                </div>
-            </div>
-        </div>
 
 
         <!-- Programs Start -->
@@ -525,7 +490,7 @@
 
 
         <!-- Testimonial Start -->
-        <div class="container-fluid testimonial py-5">
+        {{-- <div class="container-fluid testimonial py-5">
             <div class="container py-5">
                 <div class="mx-auto text-center wow fadeIn" data-wow-delay="0.1s" style="max-width: 700px;">
                     <h4 class="text-primary mb-4 border-bottom border-primary border-2 d-inline-block p-2 title-border-radius">Our Testimonials</h4>
@@ -612,7 +577,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> --}}
         <!-- Testimonial End -->
 
 

@@ -19,7 +19,11 @@ class FormController extends Controller
         $buyer->address = $request->address;
 
         $buyer->message = $request->message;
-
+        if ($request->hasFile('video')) {
+            $fileName = time() . '-logo-' . $request->file('video')->getClientOriginalName();
+            $filePath = $request->file('video')->storeAs('uploads/videos', $fileName, 'public');
+            $buyer->video = '/public/storage/' . $filePath;
+        }
         $buyer->save();
 
         return back()->with('success', ' Your submission submitted successfully');

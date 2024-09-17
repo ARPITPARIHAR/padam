@@ -394,10 +394,11 @@ h6,
     left: 0;
     background: transparent;
     border-radius: 50% 20% / 10% 40%;
-    transition: .5s;
+    transition: 0.5s;
     z-index: 1; /* Ensure it’s below content but above background */
 }
 
+/* Hover Effects */
 .service-item:hover {
     border: 1px solid var(--bs-secondary) !important;
 }
@@ -413,35 +414,36 @@ h6,
     z-index: 2; /* Ensure content is above the ::after pseudo-element */
 }
 
+/* Text and Icon Colors */
 .service-item .service-content-inner i,
 .service-item .service-content-inner p,
 .service-item .service-content-inner a.h4 {
     transition: 0.5s;
+    color: navy; /* Default color */
 }
 
 .service-item:hover .service-content-inner i,
-.service-item:hover .service-content-inner p {
-    color: var(--bs-white) !important;
-}
-
+.service-item:hover .service-content-inner p,
 .service-item:hover .service-content-inner a.h4 {
-    color: var(--bs-primary);
+    color: white !important;
 }
 
+/* Button Styling */
 .service-item .service-content-inner a.btn-primary {
-    background: var(--bs-primary) !important; /* Ensure default button color is set */
-    color: var(--bs-white) !important;
+    background: var(--bs-primary) !important; /* Default button color */
+    color: white !important;
 }
 
 .service-item:hover .service-content-inner a.btn-primary {
     background: var(--bs-white) !important;
-    color: var(--bs-primary) !important;
+    color: var(--bs-primary) !important; /* Button text color on hover */
 }
 
 .service-item .service-content-inner a.btn-primary:hover {
     background: var(--bs-primary) !important;
-    color: var(--bs-white) !important;
+    color: white !important;
 }
+
 
 
 
