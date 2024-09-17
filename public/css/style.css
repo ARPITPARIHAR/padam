@@ -179,7 +179,7 @@ h6,
 .navbar .navbar-nav .nav-link.active,
 .fixed-top.bg-white .navbar .navbar-nav .nav-link:hover,
 .fixed-top.bg-white .navbar .navbar-nav .nav-link.active {
-    color: var(--bs-primary);
+    color: darkblue;
 }
 
 .navbar .dropdown-toggle::after {
@@ -208,7 +208,7 @@ h6,
 
 .dropdown .dropdown-menu a:hover {
     background: var(--bs-secondary);
-    color: var(--bs-primary);
+    color: darkblue;
 }
 
 .navbar .nav-item:hover .dropdown-menu {
@@ -369,8 +369,10 @@ h6,
 
 
 /*** service Start ***/
+/* Base Styles */
+/* Base Styles */
 .service {
-    background:#deffc3;
+    background: #deffc3;
 }
 
 .service .service-item {
@@ -380,6 +382,7 @@ h6,
     border-radius: 50% 20% / 10% 40%;
     transition: 0.5s;
     position: relative;
+    overflow: hidden; /* Ensure hover effects are contained */
 }
 
 .service-content::after {
@@ -389,10 +392,10 @@ h6,
     height: 100%;
     top: 0;
     left: 0;
-    right: auto;
     background: transparent;
     border-radius: 50% 20% / 10% 40%;
     transition: .5s;
+    z-index: 1; /* Ensure it’s below content but above background */
 }
 
 .service-item:hover {
@@ -400,15 +403,14 @@ h6,
 }
 
 .service-item:hover .service-content::after {
-    background: var(--bs-secondary);
+    background: darkblue;
     width: 100%;
     opacity: 1;
-    z-index: 1;
 }
 
 .service-item .service-content .service-content-inner {
     position: relative;
-    z-index: 2;
+    z-index: 2; /* Ensure content is above the ::after pseudo-element */
 }
 
 .service-item .service-content-inner i,
@@ -421,8 +423,14 @@ h6,
 .service-item:hover .service-content-inner p {
     color: var(--bs-white) !important;
 }
+
 .service-item:hover .service-content-inner a.h4 {
     color: var(--bs-primary);
+}
+
+.service-item .service-content-inner a.btn-primary {
+    background: var(--bs-primary) !important; /* Ensure default button color is set */
+    color: var(--bs-white) !important;
 }
 
 .service-item:hover .service-content-inner a.btn-primary {
@@ -434,13 +442,14 @@ h6,
     background: var(--bs-primary) !important;
     color: var(--bs-white) !important;
 }
-/*** Service End ***/
+
 
 
 /*** Programs Start ***/
 .program {
-    background: linear-gradient(rgba(255, 72, 128, 0.1), rgba(255, 72, 128, 0.1));
+    background: linear-gradient(rgb(142 218 232 / 10%), rgba(255, 72, 128, 0.1));
 }
+
 
 .program .program-item .program-img .program-rate {
     position: absolute;

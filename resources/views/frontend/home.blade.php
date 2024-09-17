@@ -60,16 +60,15 @@
                 <div class="row g-5 align-items-center">
                     <div class="col-lg-5 wow fadeIn" data-wow-delay="0.1s">
                         <div class="video border">
-                            <button type="button" class="btn btn-play" data-bs-toggle="modal" data-src="https://www.youtube.com/embed/DWRcNpR6Kdc" data-bs-target="#videoModal">
-                                <span></span>
-                            </button>
+                            <!-- Replace the button with an image -->
+                            <img src="img/SPr.jpg" class="img-fluid" alt="Image" style="cursor: pointer;" data-bs-toggle="modal" data-bs-target="#imageModal">
                         </div>
                     </div>
                     <div class="col-lg-7 wow fadeIn" data-wow-delay="0.3s">
                         <h4 class="text-primary mb-4 border-bottom border-primary border-2 d-inline-block p-2 title-border-radius">About Our Platform</h4>
                         <h1 class="text-dark mb-4 display-5">Showcase Your Skills and Win Exciting Rewards</h1>
                         <p class="text-dark mb-4">
-                            Welcome to [Your Platform's Name], the ultimate destination for gamers to showcase their skills and earn rewards! Our platform provides an exciting opportunity for players of all levels to participate in a variety of gaming events. Register now to upload videos demonstrating your gaming prowess and stand a chance to win amazing prizes.
+                            Welcome to Creators India, the ultimate destination for gamers to showcase their skills and earn rewards! Our platform provides an exciting opportunity for players of all levels to participate in a variety of gaming events. Register now to upload videos demonstrating your gaming prowess and stand a chance to win amazing prizes.
                         </p>
                         <p class="text-dark mb-4">
                             Whether you're a casual player or a competitive gamer, our platform offers various events tailored to different gaming styles. Share your best moments, receive feedback from a community of gamers, and climb the leaderboard to earn your place among the top players.
@@ -93,24 +92,7 @@
         </div>
 
 
-        <!-- Modal Video -->
-        <div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content rounded-0">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Youtube Video</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <!-- 16:9 aspect ratio -->
-                        <div class="ratio ratio-16x9">
-                            <iframe class="embed-responsive-item" src="" id="video" allowfullscreen allowscriptaccess="always"
-                                allow="autoplay"></iframe>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+
         <!-- About End -->
 
 
@@ -119,7 +101,7 @@
             <div class="container py-5">
                 <div class="mx-auto text-center wow fadeIn" data-wow-delay="0.1s" style="max-width: 700px;">
                     <h4 class="text-primary mb-4 border-bottom border-primary border-2 d-inline-block p-2 title-border-radius">What We Offer</h4>
-                    <h5 style="font-size: 1.6rem; line-height: 1.3; font-weight: 500; margin-bottom: 3rem;">
+                    <h5 style="font-size: 2.1rem; line-height: 1.3; font-weight: 500; margin-bottom: 3rem;">
                         Get Involved and Earn Rewards with Our Platform
                     </h5>
 
@@ -132,7 +114,7 @@
                                     <div class="p-4"><i class="fas fa-trophy fa-6x text-primary"></i></div>
                                     <a href="}" class="h4">Participate in Competitions</a>
                                     <p class="my-3">Join various gaming competitions and showcase your skills to win exciting rewards and recognition.</p>
-                                    <a href="" class="btn btn-primary text-white px-4 py-2 my-2 btn-border-radius">Explore Competitions</a>
+                                    {{-- <a href="" class="btn btn-primary text-white px-4 py-2 my-2 btn-border-radius">Explore Competitions</a> --}}
                                 </div>
                             </div>
                         </div>
@@ -144,7 +126,7 @@
                                     <div class="p-4"><i class="fas fa-upload fa-6x text-primary"></i></div>
                                     <a href="" class="h4">Upload Your Videos</a>
                                     <p class="my-3">Share your best gaming moments by uploading videos. Let others see your talent and get feedback.</p>
-                                    <a href="" class="btn btn-primary text-white px-4 py-2 my-2 btn-border-radius">Upload Now</a>
+                                    {{-- <a href="" class="btn btn-primary text-white px-4 py-2 my-2 btn-border-radius">Upload Now</a> --}}
                                 </div>
                             </div>
                         </div>
@@ -156,7 +138,7 @@
                                     <div class="p-4"><i class="fas fa-comments fa-6x text-primary"></i></div>
                                     <a href="}" class="h4">Join the Community</a>
                                     <p class="my-3">Connect with other gamers, exchange tips, and get support from our vibrant community. Engage and grow together.</p>
-                                    <a href="" class="btn btn-primary text-white px-4 py-2 my-2 btn-border-radius">Join Community</a>
+
                                 </div>
                             </div>
                         </div>
@@ -168,7 +150,7 @@
                                     <div class="p-4"><i class="fas fa-award fa-6x text-primary"></i></div>
                                     <a href="" class="h4">Earn Rewards</a>
                                     <p class="my-3">Compete and achieve milestones to earn rewards. The more you participate, the more you earn!</p>
-                                    <a href="" class="btn btn-primary text-white px-4 py-2 my-2 btn-border-radius">See Rewards</a>
+
                                 </div>
                             </div>
                         </div>
@@ -176,8 +158,43 @@
                 </div>
             </div>
         </div>
+        <style>
+            .service-item {
+                transition: transform 0.3s ease !important;
+                /* Other styles for .service-item */
+            }
+
+            .service-item:hover {
+                transform: scale(1.05) !important; /* Slightly enlarges the item */
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2) !important; /* Adds a shadow */
+            }
+        </style>
 
         <!-- Service End -->
+        <div class="container-fluid service py-5">
+            <div class="container py-5">
+                <div class="mx-auto text-center wow fadeIn" data-wow-delay="0.1s" style="max-width: 700px;">
+                    <h4 class="text-primary mb-4 border-bottom border-primary border-2 d-inline-block p-2 title-border-radius">What We Offer</h4>
+                    <h5 style="font-size: 2.1rem; line-height: 1.3; font-weight: 500; margin-bottom: 3rem;">
+                        Get Involved and Earn Rewards with Our Platform
+                    </h5>
+                </div>
+                <div class="row g-5">
+                    <div class="col-md-6 col-lg-6 col-xl-3 wow fadeIn" data-wow-delay="0.1s">
+                        <div class="text-center border-primary border bg-white service-item">
+                            <div class="service-content d-flex align-items-center justify-content-center p-4">
+                                <div class="service-content-inner">
+                                    <div class="p-4"><i class="fas fa-trophy fa-6x text-primary"></i></div>
+                                    <a href="#" class="h4">Participate in Competitions</a>
+                                    <p class="my-3">Join various gaming competitions and showcase your skills to win exciting rewards and recognition.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Add other service items similarly -->
+                </div>
+            </div>
+        </div>
 
 
         <!-- Programs Start -->
@@ -185,7 +202,10 @@
             <div class="container py-5">
                 <div class="mx-auto text-center wow fadeIn" data-wow-delay="0.1s" style="max-width: 700px;">
                     <h4 class="text-primary mb-4 border-bottom border-primary border-2 d-inline-block p-2 title-border-radius">Our Programs</h4>
-                    <h1 class="mb-5 display-3">We Offer An Exclusive Program For Kids</h1>
+                    <h5 style="font-size: 2.1rem; line-height: 1.3; font-weight: 500; margin-bottom: 3rem;">
+                        We Offer Fun and Interactive Activities
+                    </h5>
+
                 </div>
                 <div class="row g-5 justify-content-center">
                     <div class="col-md-6 col-lg-6 col-xl-4 wow fadeIn" data-wow-delay="0.1s">
@@ -194,26 +214,16 @@
                                 <div class="overflow-hidden img-border-radius">
                                     <img src="img/program-1.jpg" class="img-fluid w-100" alt="Image">
                                 </div>
-                                <div class="px-4 py-2 bg-primary text-white program-rate">$60.99</div>
+
                             </div>
                             <div class="program-text bg-white px-4 pb-3">
                                 <div class="program-text-inner">
                                     <a href="#" class="h4">English For Today</a>
-                                    <p class="mt-3 mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed purus consectetur,</p>
+
                                 </div>
                             </div>
-                            <div class="program-teacher d-flex align-items-center border-top border-primary bg-white px-4 py-3">
-                                <img src="img/program-teacher.jpg" class="img-fluid rounded-circle p-2 border border-primary bg-white" alt="Image" style="width: 70px; height: 70px;">
-                                <div class="ms-3">
-                                    <h6 class="mb-0 text-primary">Mary Mordern</h6>
-                                    <small>Arts Designer</small>
-                                </div>
-                            </div>
-                            <div class="d-flex justify-content-between px-4 py-2 bg-primary rounded-bottom">
-                                <small class="text-white"><i class="fas fa-wheelchair me-1"></i> 30 Sits</small>
-                                <small class="text-white"><i class="fas fa-book me-1"></i> 11 Lessons</small>
-                                <small class="text-white"><i class="fas fa-clock me-1"></i> 60 Hours</small>
-                            </div>
+
+
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-6 col-xl-4 wow fadeIn" data-wow-delay="0.3s">
@@ -222,26 +232,16 @@
                                 <div class="overflow-hidden img-border-radius">
                                     <img src="img/program-2.jpg" class="img-fluid w-100" alt="Image">
                                 </div>
-                                <div class="px-4 py-2 bg-primary text-white program-rate">$60.99</div>
+
                             </div>
                             <div class="program-text bg-white px-4 pb-3">
                                 <div class="program-text-inner">
                                     <a href="#" class="h4">Graphics Arts</a>
-                                    <p class="mt-3 mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed purus consectetur,</p>
+
                                 </div>
                             </div>
-                            <div class="program-teacher d-flex align-items-center border-top border-primary bg-white px-4 py-3">
-                                <img src="img/program-teacher.jpg" class="img-fluid rounded-circle p-2 border border-primary bg-white" alt="" style="width: 70px; height: 70px;">
-                                <div class="ms-3">
-                                    <h6 class="mb-0 text-primary">Mary Mordern</h6>
-                                    <small>Arts Designer</small>
-                                </div>
-                            </div>
-                            <div class="d-flex justify-content-between px-4 py-2 bg-primary rounded-bottom">
-                                <small class="text-white"><i class="fas fa-wheelchair me-1"></i> 30 Sits</small>
-                                <small class="text-white"><i class="fas fa-book me-1"></i> 11 Lessons</small>
-                                <small class="text-white"><i class="fas fa-clock me-1"></i> 60 Hours</small>
-                            </div>
+
+
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-6 col-xl-4 wow fadeIn" data-wow-delay="0.5s">
@@ -250,30 +250,21 @@
                                 <div class="overflow-hidden img-border-radius">
                                     <img src="img/program-3.jpg" class="img-fluid w-100" alt="Image">
                                 </div>
-                                <div class="px-4 py-2 bg-primary text-white program-rate">$60.99</div>
+
                             </div>
                             <div class="program-text bg-white px-4 pb-3">
                                 <div class="program-text-inner">
                                     <a href="#" class="h4">General Science</a>
-                                    <p class="mt-3 mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed purus consectetur,</p>
+
                                 </div>
                             </div>
-                            <div class="program-teacher d-flex align-items-center border-top border-primary bg-white px-4 py-3">
-                                <img src="img/program-teacher.jpg" class="img-fluid rounded-circle p-2 border border-primary bg-white" alt="" style="width: 70px; height: 70px;">
-                                <div class="ms-3">
-                                    <h6 class="mb-0 text-primary">Mary Mordern</h6>
-                                    <small>Arts Designer</small>
-                                </div>
-                            </div>
-                            <div class="d-flex justify-content-between px-4 py-2 bg-primary rounded-bottom">
-                                <small class="text-white"><i class="fas fa-wheelchair me-1"></i> 30 Sits</small>
-                                <small class="text-white"><i class="fas fa-book me-1"></i> 11 Lessons</small>
-                                <small class="text-white"><i class="fas fa-clock me-1"></i> 60 Hours</small>
-                            </div>
+
+
                         </div>
                     </div>
                     <div class="d-inline-block text-center wow fadeIn" data-wow-delay="0.1s">
-                        <a href="#" class="btn btn-primary px-5 py-3 text-white btn-border-radius">Vew All Programs</a>
+                        <a href="#" class="btn btn-primary px-5 py-3 text-white btn-border-radius" style="background-color: #003366; border-color: #003366;">View All Programs</a>
+
                     </div>
                 </div>
             </div>
@@ -282,7 +273,7 @@
 
 
         <!-- Events Start -->
-        <div class="container-fluid events py-5 bg-light">
+        {{-- <div class="container-fluid events py-5 bg-light">
             <div class="container py-5">
                 <div class="mx-auto text-center wow fadeIn" data-wow-delay="0.1s" style="max-width: 700px;">
                     <h4 class="text-primary mb-4 border-bottom border-primary border-2 d-inline-block p-2 title-border-radius">Our Events</h4>
@@ -354,12 +345,12 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> --}}
         <!-- Events End-->
 
 
         <!-- Blog Start-->
-        <div class="container-fluid blog py-5">
+        {{-- <div class="container-fluid blog py-5">
             <div class="container py-5">
                 <div class="mx-auto text-center wow fadeIn" data-wow-delay="0.1s" style="max-width: 600px;">
                     <h4 class="text-primary mb-4 border-bottom border-primary border-2 d-inline-block p-2 title-border-radius">Latest News & Blog</h4>
@@ -455,12 +446,12 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> --}}
         <!-- Blog End-->
 
 
         <!-- Team Start-->
-        <div class="container-fluid team py-5">
+        {{-- <div class="container-fluid team py-5">
             <div class="container py-5">
                 <div class="mx-auto text-center wow fadeIn" data-wow-delay="0.1s" style="max-width: 600px;">
                     <h4 class="text-primary mb-4 border-bottom border-primary border-2 d-inline-block p-2 title-border-radius">Our Team</h4>
@@ -529,7 +520,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> --}}
         <!-- Team End-->
 
 
@@ -538,7 +529,10 @@
             <div class="container py-5">
                 <div class="mx-auto text-center wow fadeIn" data-wow-delay="0.1s" style="max-width: 700px;">
                     <h4 class="text-primary mb-4 border-bottom border-primary border-2 d-inline-block p-2 title-border-radius">Our Testimonials</h4>
-                    <h1 class="mb-5 display-3">Parents Say About Us</h1>
+                    <h5 style="font-size: 2.1rem; line-height: 1.3; font-weight: 500; margin-bottom: 3rem;">
+                        Say About Us
+                    </h5>
+
                 </div>
                 <div class="owl-carousel testimonial-carousel wow fadeIn" data-wow-delay="0.3s">
                     <div class="testimonial-item img-border-radius bg-light border border-primary p-4">

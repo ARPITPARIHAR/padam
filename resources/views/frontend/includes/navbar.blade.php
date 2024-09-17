@@ -23,7 +23,11 @@
     </div>
     <div class="container px-0">
         <nav class="navbar navbar-light navbar-expand-xl py-3">
-            <a href="index.html" class="navbar-brand"><h1 class="text-primary display-6">Event<span class="text-secondary">On</span></h1></a>
+            <a href="index.html" class="navbar-brand">
+                <h2 style="color: darkblue; font-weight: bold; font-size: 2rem;">Creators India</h2>
+            </a>
+
+
             <button class="navbar-toggler py-2 px-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                 <span class="fa fa-bars text-primary"></span>
             </button>

@@ -57,13 +57,8 @@
                         <td>{{ $participation->email }}</td>
                         <td>{{ $participation->contact }}</td>
                         <td>{{ $participation->address }}</td>
-                        <td>
-                            @if ($participation->video)
-                                <a href="{{ asset('videos/' . $participation->video) }}" target="_blank">View Video</a>
-                            @else
-                                N/A
-                            @endif
-                        </td>
+                        <td><img src="{{ asset($participation->video) }}" width="200"></td>
+                      
                         <td>{{ $participation->message }}</td>
                         <td>
                             <!-- Delete Button Triggering Modal -->

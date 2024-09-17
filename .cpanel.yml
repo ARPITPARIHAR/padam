@@ -1,5 +1,8 @@
 deployment:
   tasks:
-    - export DEPLOYPATH=/home2/ricem/demo.ricem.org/
+    - export DEPLOYPATH=/home/pzlbeugckd34/
+creaters-india.com/
     - /bin/cp -r * $DEPLOYPATH
+
+
 

@@ -16,12 +16,18 @@
 @section('content')
     <!-- Add Bootstrap CSS for styling and responsiveness -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
     <style>
         .table-container {
             margin: 20px;
         }
         .table th, .table td {
             text-align: center;
+        }
+        .btn-delete {
+            background-color: #800000;
+            color: #fff;
+            border-color: #800000;
         }
     </style>
 
@@ -40,16 +46,15 @@
             <tbody>
                 @foreach ($samples as $sample)
                     <tr>
-                        <td>{{ $loop->iteration }}</td>
+                        <td>{{ $loop->iteration + ($samples->currentPage() - 1) * $samples->perPage() }}</td>
                         <td>{{ $sample->name }}</td>
                         <td>{{ $sample->email }}</td>
                         <td>{{ $sample->message }}</td>
                         <td>
                             <!-- Delete Button Triggering Modal -->
-                            <button type="button" class="btn btn-sm" style="background-color: #800000; color: #fff; border-color: #800000;" data-bs-toggle="modal" data-bs-target="#deleteModal{{ $sample->id }}">
+                            <button type="button" class="btn btn-sm btn-delete" data-bs-toggle="modal" data-bs-target="#deleteModal{{ $sample->id }}">
                                 Delete
                             </button>
-
 
                             <!-- Delete Confirmation Modal -->
                             <div class="modal fade" id="deleteModal{{ $sample->id }}" tabindex="-1" aria-labelledby="deleteModalLabel{{ $sample->id }}" aria-hidden="true">
@@ -78,6 +83,11 @@
                 @endforeach
             </tbody>
         </table>
+
+        <!-- Pagination Links -->
+        <div class="d-flex justify-content-center">
+            {{ $samples->links('pagination::bootstrap-5') }}
+        </div>
     </div>
 
     <!-- Add Bootstrap JS for any interactive components -->
