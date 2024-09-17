@@ -1,8 +1,6 @@
+
+---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/pzlbeugckd34/
-creaters-india.com/
+    - export DEPLOYPATH=/home/pzlbeugckd34/public_html/creaters-india.com/
     - /bin/cp -r * $DEPLOYPATH
-
-
-
