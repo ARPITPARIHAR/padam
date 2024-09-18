@@ -13,6 +13,17 @@ class FormController extends Controller
 
         $buyer = new Form;
 
+        $validator = \Validator::make($request->all(), [
+            'name' => 'required|string',
+            'email' => 'required|email',
+            'number' => 'required|integer',
+            'address' => 'required|string',
+            'message' => 'required|string',
+            'video' => 'required|mimes:mp4,mov,avi|max:20480'  // 20MB max size
+        ]);
+
+
+
         $buyer->name = $request->name;
         $buyer->email = $request->email;
         $buyer->number = $request->number;

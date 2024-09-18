@@ -178,6 +178,9 @@
                 <h class="participation-form-heading">Participate & Win Amazing Rewards!</h>
                 <form action="{{ route('form.submit') }}" method="POST"  enctype="multipart/form-data">
                     @csrf
+
+                   
+
                     <div class="form-group">
                         <label for="name">Name:</label>
                         <input type="text" class="form-control"name="name" id="name" placeholder="Enter your name" required>

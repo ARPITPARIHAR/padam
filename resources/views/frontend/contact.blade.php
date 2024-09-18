@@ -140,7 +140,7 @@ document.addEventListener('DOMContentLoaded', function () {
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    background: linear-gradient(to right, rgba(145, 61, 136, 0.8), rgba(72, 182, 181, 0.8)); /* New gradient */
+    background: black; /* New gradient */
     padding: 2rem;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
