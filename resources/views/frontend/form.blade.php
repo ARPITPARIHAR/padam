@@ -176,7 +176,7 @@
         <div class="col-lg-10">
             <div class="participation-form-container">
                 <h class="participation-form-heading">Participate & Win Amazing Rewards!</h>
-                <form action="{{ route('form.submit') }}" method="POST">
+                <form action="{{ route('form.submit') }}" method="POST"  enctype="multipart/form-data">
                     @csrf
                     <div class="form-group">
                         <label for="name">Name:</label>
