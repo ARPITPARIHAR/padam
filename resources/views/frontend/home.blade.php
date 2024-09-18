@@ -66,7 +66,7 @@
                     </div>
                     <div class="col-lg-7 wow fadeIn" data-wow-delay="0.3s">
                         <h4 class="text-primary mb-4 border-bottom border-primary border-2 d-inline-block p-2 title-border-radius">About Our Platform</h4>
-                        <h1 class="text-dark mb-4 display-5">Showcase Your Skills and Win Exciting Rewards</h1>
+                        <h1 class="text-dark mb-4 display-5">Creators India You tube video Diwali Compition 2024</h1>
                         <p class="text-dark mb-4">
                             Welcome to Creators India, the ultimate destination for gamers to showcase their skills and earn rewards! Our platform provides an exciting opportunity for players of all levels to participate in a variety of gaming events. Register now to upload videos demonstrating your gaming prowess and stand a chance to win amazing prizes.
                         </p>
@@ -97,7 +97,7 @@
 
 
         <!-- Service Start -->
-        <div class="container-fluid service py-5" >
+        {{-- <div class="container-fluid service py-5" >
             <div class="container py-5">
                 <div class="mx-auto text-center wow fadeIn" data-wow-delay="0.1s" style="max-width: 700px;">
                     <h4 class="text-primary mb-4 border-bottom border-primary border-2 d-inline-block p-2 title-border-radius">What We Offer</h4>
@@ -115,11 +115,11 @@
                                     <a href="}" class="h4">Participate in Competitions</a>
                                     <p class="my-3">Join various gaming competitions and showcase your skills to win exciting rewards and recognition.</p>
                                     {{-- <a href="" class="btn btn-primary text-white px-4 py-2 my-2 btn-border-radius">Explore Competitions</a> --}}
-                                </div>
+                                {{-- </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-md-6 col-lg-6 col-xl-3 wow fadeIn" data-wow-delay="0.3s">
+                    </div> --}}
+                    {{-- <div class="col-md-6 col-lg-6 col-xl-3 wow fadeIn" data-wow-delay="0.3s">
                         <div class="text-center border-primary border bg-white service-item">
                             <div class="service-content d-flex align-items-center justify-content-center p-4">
                                 <div class="service-content-inner">
@@ -130,8 +130,8 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-md-6 col-lg-6 col-xl-3 wow fadeIn" data-wow-delay="0.5s">
+                    </div> --}}
+                    {{-- <div class="col-md-6 col-lg-6 col-xl-3 wow fadeIn" data-wow-delay="0.5s">
                         <div class="text-center border-primary border bg-white service-item">
                             <div class="service-content d-flex align-items-center justify-content-center p-4">
                                 <div class="service-content-inner">
@@ -142,8 +142,8 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-md-6 col-lg-6 col-xl-3 wow fadeIn" data-wow-delay="0.7s">
+                    </div> --}}
+                    {{-- <div class="col-md-6 col-lg-6 col-xl-3 wow fadeIn" data-wow-delay="0.7s">
                         <div class="text-center border-primary border bg-white service-item">
                             <div class="service-content d-flex align-items-center justify-content-center p-4">
                                 <div class="service-content-inner">
@@ -157,8 +157,8 @@
                     </div>
                 </div>
             </div>
-        </div>
-       
+        </div> --}}
+
         <!-- Service End -->
 
 
