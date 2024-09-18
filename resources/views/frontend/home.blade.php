@@ -55,41 +55,301 @@
 
 
         <!-- About Start -->
-        <div class="container-fluid py-5 about bg-light">
-            <div class="container py-5">
-                <div class="row g-5 align-items-center">
-                    <div class="col-lg-5 wow fadeIn" data-wow-delay="0.1s">
-                        <div class="video border">
-                            <!-- Replace the button with an image -->
-                            <img src="img/SPr.jpg" class="img-fluid" alt="Image" style="cursor: pointer;" data-bs-toggle="modal" data-bs-target="#imageModal">
-                        </div>
-                    </div>
-                    <div class="col-lg-7 wow fadeIn" data-wow-delay="0.3s">
-                        <h4 class="text-primary mb-4 border-bottom border-primary border-2 d-inline-block p-2 title-border-radius">About Our Platform</h4>
-                        <h1 class="text-dark mb-4 display-5">Creators India You tube video Diwali Compition 2024</h1>
-                        <p class="text-dark mb-4">
-                            Welcome to Creators India, the ultimate destination for gamers to showcase their skills and earn rewards! Our platform provides an exciting opportunity for players of all levels to participate in a variety of gaming events. Register now to upload videos demonstrating your gaming prowess and stand a chance to win amazing prizes.
-                        </p>
-                        <p class="text-dark mb-4">
-                            Whether you're a casual player or a competitive gamer, our platform offers various events tailored to different gaming styles. Share your best moments, receive feedback from a community of gamers, and climb the leaderboard to earn your place among the top players.
-                        </p>
-                        <div class="row mb-4">
-                            <div class="col-lg-6">
-                                <h6 class="mb-3"><i class="fas fa-check-circle me-2"></i>Participate in Engaging Gaming Events</h6>
-                                <h6 class="mb-3"><i class="fas fa-check-circle me-2 text-primary"></i>Upload and Showcase Your Gaming Videos</h6>
-                                <h6 class="mb-3"><i class="fas fa-check-circle me-2 text-secondary"></i>Win Exciting Rewards and Prizes</h6>
-                            </div>
-                            <div class="col-lg-6">
-                                <h6 class="mb-3"><i class="fas fa-check-circle me-2"></i>Connect with a Community of Gamers</h6>
-                                <h6 class="mb-3"><i class="fas fa-check-circle me-2 text-primary"></i>Receive Feedback and Improve</h6>
-                                <h6><i class="fas fa-check-circle me-2 text-secondary"></i>Climb the Leaderboards</h6>
-                            </div>
-                        </div>
-                        {{-- <a href="" class="btn btn-primary px-5 py-3 btn-border-radius">Join the Action</a> --}}
-                    </div>
+
+<style>
+
+        /* Style for section containers */
+        .section {
+            background: #ffffff;
+            border-radius: 45px; /* Increased border-radius */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s; /* Added background-color transition */
+            padding: 20px; /* Optional: Add padding for spacing */
+            margin-bottom: 20px; /* Optional: Add margin for spacing between sections */
+        }
+
+        .section:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            background-color: #f8f9fa; /* Light background color on hover for visual effect */
+        }
+
+        /* Style for section titles */
+        .section-title {
+            border-bottom: 3px solid #007bff;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+
+        /* Style for highlight background areas */
+        .highlight-bg {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            padding: 20px;
+            border-radius: 25px; /* Consistent border-radius */
+            margin-bottom: 20px;
+        }
+
+        /* Style for list items with icons */
+        .list-icon li {
+            margin-bottom: 10px;
+        }
+
+        .list-icon li::before {
+            content: '✔️';
+            margin-right: 10px;
+            color: #007bff;
+        }
+
+        /* General text color classes */
+        .text-dark {
+            color: #333;
+        }
+
+        .text-primary {
+            color: #007bff;
+        }
+
+        /* Flexbox styles for equal height rows and columns */
+        .row-equal {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .col-equal {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card {
+            background: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Style for custom heading */
+        .custom-heading {
+    font-size: 2.5rem; /* Adjust as needed */
+    font-weight: 700; /* Bold text */
+    text-align: center; /* Center alignment */
+    color: navy; /* Text color */
+    margin: 1rem auto; /* Equal margin on left and right for horizontal centering */
+    padding: 0.5rem 1rem; /* Padding for internal spacing */
+    border-radius: 12px; /* Stylish corners */
+    display: block; /* Use block display to ensure proper centering */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Shadow around heading */
+    background-color: white; /* Background color for visibility */
+    /* Remove duplicate text-align property and ensure all properties are well-defined */
+}
+
+
+    </style>
+
+
+
+
+
+
+<div class="container-fluid py-5 about" style="
+       background: linear-gradient(135deg, #fff3d3, #ffc371);
+
+
+
+
+    <div class="container py-5">
+        <div class="row mb-4">
+            <div class="col-12 wow fadeIn" data-wow-delay="0.3s">
+
+                <h5 class=" custom-heading">Creators India YouTube Video Diwali Competition 2024</h5>
+            </div>
+        </div>
+
+        <!-- Age Groups -->
+        <div class="row row-equal">
+            <!-- English Age Groups Side by Side -->
+            <div class="col-lg-6 col-equal">
+                <div class="card wow fadeIn" data-wow-delay="0.3s">
+                    <h3 style="
+                  /* White background */
+                    color: #d90e0e; /* Dark text color for contrast */
+                    padding: 15px; /* Increased padding for more space around the text */
+                  /* Slightly larger rounded corners */
+                    /* More pronounced shadow for a lifted effect */
+                 /* Larger font size for emphasis */
+                    font-weight: 800; /* Bold text for prominence */
+                   /* Center align text */
+                    margin-bottom: 1.5rem; /* Increased spacing below the heading */
+                ">
+                    Age Group 1: Children (5-14 years old)
+                </h3>
+                    <h4 class="text-dark mb-3">Theme: "Express Your Creativity"</h4>
+                    <ul class="list-icon mb-4">
+                        <li><strong>Video Format:</strong> YouTube Shorts (up to 30 seconds)</li>
+                        <li><strong>Submission Topics:</strong>
+                            <ul>
+                                <li>Plantation Projects</li>
+                                <li>Paper Creativity</li>
+                                <li>Fun Science Experiments</li>
+                                <li>Dancing to Fun Songs</li>
+                                <li>Pet Tricks</li>
+                                <li>Fun with Clay</li>
+                                <li>Magic Videos</li>
+                                <li>Comedy Videos</li>
+                                <li>Playing Musical Instruments</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <p class="text-dark mb-4">
+                        Encourage creativity and imagination, focusing on fun and learning.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-lg-6 col-equal">
+                <div class="card wow fadeIn" data-wow-delay="0.3s">
+                    <h3 style="
+                    /* White background */
+                      color: #d90e0e; /* Dark text color for contrast */
+                      padding: 15px; /* Increased padding for more space around the text */
+                    /* Slightly larger rounded corners */
+                      /* More pronounced shadow for a lifted effect */
+                   /* Larger font size for emphasis */
+                      font-weight: 800; /* Bold text for prominence */
+                     /* Center align text */
+                      margin-bottom: 1.5rem; /* Increased spacing below the heading */
+                  ">
+                  Age Group 2: Teens & Adults (15 - above)
+                  </h3>
+
+                    <h4 class="text-dark mb-3">Theme: "Celebrate Traditional Games"</h4>
+                    <ul class="list-icon mb-4">
+                        <li><strong>Video Format:</strong> Videos of any length up to 3 minutes.</li>
+                        <li><strong>Submission Topics:</strong>
+                            <ul>
+                                <li>Kabaddi</li>
+                                <li>Kho-Kho</li>
+                                <li>Pehal Dooj</li>
+                                <li>Langdi Tang</li>
+                                <li>Janjeer</li>
+                                <li>Satolia (Seven Stones)</li>
+                                <li>Marbles (Kanche)</li>
+                                <li>Carrom</li>
+                                <li>Gilli Danda</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <p class="text-dark mb-4">
+                        This group focuses on preserving and promoting cultural heritage through traditional games.
+                    </p>
                 </div>
             </div>
         </div>
+
+        <!-- Hindi Sections -->
+        <div class="row row-equal">
+            <!-- Hindi Age Group 1 -->
+            <div class="col-lg-6 col-equal">
+                <div class="card wow fadeIn" data-wow-delay="0.3s">
+                    <h3 style="
+                    /* White background */
+                      color: #d90e0e; /* Dark text color for contrast */
+                      padding: 15px; /* Increased padding for more space around the text */
+                    /* Slightly larger rounded corners */
+                      /* More pronounced shadow for a lifted effect */
+                   /* Larger font size for emphasis */
+                      font-weight: 800; /* Bold text for prominence */
+                     /* Center align text */
+                      margin-bottom: 1.5rem; /* Increased spacing below the heading */
+                  ">
+               आयु वर्ग 1: बच्चे (5-14 वर्ष)
+                  </h3>
+
+
+                    <h4 class="text-dark mb-3">थीम: "अपनी रचनात्मकता दिखाएं"</h4>
+                    <ul class="list-icon mb-4">
+                        <li>वीडियो फॉर्मेट: YouTube Shorts (15 सेकंड तक)</li>
+                        <li>जमा करने के विषय:
+                            <ul>
+                                <li>पौधारोपण परियोजनाएं</li>
+                                <li>कागज की रचनात्मकता</li>
+                                <li>मज़ेदार विज्ञान प्रयोग</li>
+                                <li>मज़ेदार गानों पर डांस</li>
+                                <li>पालतू जानवरों के करतब</li>
+                                <li>Clay से अलग-अलग चीजें बनाना</li>
+                                <li>मैजिक वीडियो</li>
+                                <li>कॉमेडी वीडियो</li>
+                                <li>संगीत वाद्ययंत्र बजाना</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <p class="text-dark mb-4">
+                        रचनात्मकता और कल्पना को प्रोत्साहित करें, मज़े और सीखने पर ध्यान केंद्रित करें।
+                    </p>
+                </div>
+            </div>
+
+            <!-- Hindi Age Group 2 -->
+            <div class="col-lg-6 col-equal">
+                <div class="card wow fadeIn" data-wow-delay="0.3s">
+                    <h3 style="
+                    /* White background */
+                      color: #d90e0e; /* Dark text color for contrast */
+                      padding: 15px; /* Increased padding for more space around the text */
+                    /* Slightly larger rounded corners */
+                      /* More pronounced shadow for a lifted effect */
+                   /* Larger font size for emphasis */
+                      font-weight: 800; /* Bold text for prominence */
+                     /* Center align text */
+                      margin-bottom: 1.5rem; /* Increased spacing below the heading */
+                  ">
+               आयु वर्ग 2: किशोर और वयस्क (15 वर्ष और ऊपर)
+                  </h3>
+
+
+                    <h4 class="text-dark mb-3">थीम: "पारंपरिक खेलों का उत्सव"</h4>
+                    <ul class="list-icon mb-4">
+                        <li>वीडियो फॉर्मेट: किसी भी लंबाई के वीडियो, 3 मिनट तक।</li>
+                        <li>जमा करने के विषय:
+                            <ul>
+                                <li>कबड्डी</li>
+                                <li>खो-खो</li>
+                                <li>पहेल दूज</li>
+                                <li>लंगड़ी टांग</li>
+                                <li>जंजीर</li>
+                                <li>सातोलीया (सात पत्थर)</li>
+                                <li>गिट्टी</li>
+                                <li>कैरम</li>
+                                <li>गिली डंडा</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <p class="text-dark mb-4">
+                        यह समूह पारंपरिक खेलों के माध्यम से सांस्कृतिक धरोहर को संरक्षित करने और बढ़ावा देने पर केंद्रित है।
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Proposed Rewards Section -->
+        <div class="section highlight-bg">
+            <h4 class="text-primary mb-4 text-center">प्रस्तावित पुरस्कार:</h4>
+            <ul class="text-dark mb-4 text-center list-icon">
+                <li>बच्चों के लिए: प्रमाणपत्र, कला आपूर्ति, या शैक्षिक किट।</li>
+                <li>किशोरों और वयस्कों के लिए: खेल गियर, तकनीकी उपकरण, या सांस्कृतिक कार्यक्रमों के टिकट।</li>
+            </ul>
+            <p class="text-dark mb-4 text-center">
+                छोटे बच्चों के लिए रचनात्मकता को जोड़ने और बड़े बच्चों के लिए सांस्कृतिक संरक्षण को मिलाकर, प्रतियोगिता एक व्यापक दृष्टिकोण प्रदान करती है।
+            </p>
+        </div>
+    </div>
+</div>
+
 
 
 
@@ -127,7 +387,7 @@
                                     <a href="" class="h4">Upload Your Videos</a>
                                     <p class="my-3">Share your best gaming moments by uploading videos. Let others see your talent and get feedback.</p>
                                     {{-- <a href="" class="btn btn-primary text-white px-4 py-2 my-2 btn-border-radius">Upload Now</a> --}}
-                                </div>
+                                {{-- </div>
                             </div>
                         </div>
                     </div> --}}
@@ -227,6 +487,62 @@
 
                         </div>
                     </div>
+                    <div class="col-md-6 col-lg-6 col-xl-4 wow fadeIn" data-wow-delay="0.3s">
+                        <div class="program-item rounded">
+                            <div class="program-img position-relative">
+                                <div class="overflow-hidden img-border-radius">
+                                    <img src="img/program-2.jpg" class="img-fluid w-100" alt="Image">
+                                </div>
+
+                            </div>
+                            <div class="program-text bg-white px-4 pb-3">
+                                <div class="program-text-inner">
+                                    <a href="#" class="h4">Graphics Arts</a>
+
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-6 col-xl-4 wow fadeIn" data-wow-delay="0.3s">
+                        <div class="program-item rounded">
+                            <div class="program-img position-relative">
+                                <div class="overflow-hidden img-border-radius">
+                                    <img src="img/program-2.jpg" class="img-fluid w-100" alt="Image">
+                                </div>
+
+                            </div>
+                            <div class="program-text bg-white px-4 pb-3">
+                                <div class="program-text-inner">
+                                    <a href="#" class="h4">Graphics Arts</a>
+
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-6 col-xl-4 wow fadeIn" data-wow-delay="0.3s">
+                        <div class="program-item rounded">
+                            <div class="program-img position-relative">
+                                <div class="overflow-hidden img-border-radius">
+                                    <img src="img/program-2.jpg" class="img-fluid w-100" alt="Image">
+                                </div>
+
+                            </div>
+                            <div class="program-text bg-white px-4 pb-3">
+                                <div class="program-text-inner">
+                                    <a href="#" class="h4">Graphics Arts</a>
+
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+
                     <div class="d-inline-block text-center wow fadeIn" data-wow-delay="0.1s">
                         <a href="#" class="btn btn-primary px-5 py-3 text-white btn-border-radius" style="background-color: #003366; border-color: #003366;">View All Programs</a>
 

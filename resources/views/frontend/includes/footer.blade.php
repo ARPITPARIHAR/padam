@@ -37,9 +37,8 @@
                 <div class="footer-item">
                     <h4 class=" mb-4 border-bottom border-primary border-2 d-inline-block p-2 title-border-radius">LOCATION</h4>
                     <div class="d-flex flex-column align-items-start">
-                        <div class="text-body mb-4"><i class="fa fa-map-marker-alt text-primary me-2"></i> Y-18-A ,
+                        <div class="text-body mb-4"><i class="fa fa-map-marker-alt text-primary me-2"></i> 
 
-                            Sudarshana Nagar,
                             Bikaner (Rajasthan)
                             334003</div>
                     <!-- Phone Number Link - opens dialer when clicked -->
@@ -49,7 +48,7 @@
 
 <!-- Email Link - opens email client when clicked -->
 <a href="mailto:contact@auricletechnologies.com" class="text-start rounded-0 text-body mb-4">
-    <i class="fas fa-envelope text-primary me-2"></i> contact@auricletechnologies.com
+    <i class="fas fa-envelope text-primary me-2"></i> creatorsindia.com
 </a>
 
                         <div class="footer-icon d-flex">
