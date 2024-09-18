@@ -19,7 +19,7 @@
             overflow-x: hidden;
         }
         .participation-form-container {
-            background: #ffd901;
+            background: rgb(255, 255, 184);
             border-radius: 15px;
             box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
             padding: 40px;
@@ -101,13 +101,13 @@
         }
         .form-group label {
             font-weight: 600;
-            color: #333;
+            color: black;
             margin-bottom: 5px;
             display: block;
         }
         .form-group .form-control {
             border-radius: 10px;
-            border: 2px solid #dedede;
+            border: 1px solid #dedede;
             padding: 15px;
             font-size: 1rem;
             transition: border-color 0.3s ease, box-shadow 0.3s ease;
@@ -179,7 +179,7 @@
                 <form action="{{ route('form.submit') }}" method="POST"  enctype="multipart/form-data">
                     @csrf
 
-                   
+
 
                     <div class="form-group">
                         <label for="name">Name:</label>

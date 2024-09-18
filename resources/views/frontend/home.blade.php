@@ -434,6 +434,16 @@
 
 
         <!-- Programs Start -->
+
+        <style>
+            .program-img img {
+                height: 250px !important; /* Force the height */
+                object-fit: cover !important; /* Ensure proper scaling */
+                width: 100% !important; /* Ensure full width */
+            }
+        </style>
+
+
         <div class="container-fluid program  py-5">
             <div class="container py-5">
                 <div class="mx-auto text-center wow fadeIn" data-wow-delay="0.1s" style="max-width: 700px;">
@@ -448,13 +458,13 @@
                         <div class="program-item rounded">
                             <div class="program-img position-relative">
                                 <div class="overflow-hidden img-border-radius">
-                                    <img src="img/program-1.jpg" class="img-fluid w-100" alt="Image">
+                                    <img src="img/plantation.jpg" class="img-fluid w-100" alt="Image">
                                 </div>
 
                             </div>
                             <div class="program-text bg-white px-4 pb-3">
                                 <div class="program-text-inner">
-                                    <a href="#" class="h4">English For Today</a>
+                                    <a href="#" class="h4">Plantation</a>
 
                                 </div>
                             </div>
@@ -466,13 +476,13 @@
                         <div class="program-item rounded">
                             <div class="program-img position-relative">
                                 <div class="overflow-hidden img-border-radius">
-                                    <img src="img/program-2.jpg" class="img-fluid w-100" alt="Image">
+                                    <img src="img/musical-instrument.jpg" class="img-fluid w-100" alt="Image">
                                 </div>
 
                             </div>
                             <div class="program-text bg-white px-4 pb-3">
                                 <div class="program-text-inner">
-                                    <a href="#" class="h4">Graphics Arts</a>
+                                    <a href="#" class="h4">Playing  Instruments</a>
 
                                 </div>
                             </div>
@@ -508,7 +518,7 @@
                             </div>
                             <div class="program-text bg-white px-4 pb-3">
                                 <div class="program-text-inner">
-                                    <a href="#" class="h4">Graphics Arts</a>
+                                    <a href="#" class="h4">Paper Creativity</a>
 
                                 </div>
                             </div>
@@ -520,13 +530,13 @@
                         <div class="program-item rounded">
                             <div class="program-img position-relative">
                                 <div class="overflow-hidden img-border-radius">
-                                    <img src="img/program-2.jpg" class="img-fluid w-100" alt="Image">
+                                    <img src="img/kabdi5.jpg" class="img-fluid w-100" alt="Image">
                                 </div>
 
                             </div>
                             <div class="program-text bg-white px-4 pb-3">
                                 <div class="program-text-inner">
-                                    <a href="#" class="h4">Graphics Arts</a>
+                                    <a href="#" class="h4">Kabaddi</a>
 
                                 </div>
                             </div>
@@ -538,13 +548,13 @@
                         <div class="program-item rounded">
                             <div class="program-img position-relative">
                                 <div class="overflow-hidden img-border-radius">
-                                    <img src="img/program-2.jpg" class="img-fluid w-100" alt="Image">
+                                    <img src="img/marbles.jpg" class="img-fluid w-100" alt="Image">
                                 </div>
 
                             </div>
                             <div class="program-text bg-white px-4 pb-3">
                                 <div class="program-text-inner">
-                                    <a href="#" class="h4">Graphics Arts</a>
+                                    <a href="#" class="h4">Marbles (Kancha)</a>
 
                                 </div>
                             </div>
