@@ -30,9 +30,9 @@ class PageController extends Controller
         return view('frontend.products');
     }
 
-    public function fabric(Request $request)
+    public function programme(Request $request)
     {
-        return view('frontend.fabric');
+        return view('frontend.programme');
     }
 
     public function garment(Request $request)

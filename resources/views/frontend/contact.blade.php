@@ -19,7 +19,7 @@
                         <i class="fas fa-map-marker-alt fa-2x text-primary me-4"></i>
                         <div class="">
                             <h4>Address</h4>
-                            <p class="mb-2"> Y-18-A,Sudarshana Nagar Bikaner </p>
+                            <p class="mb-2">  Bikaner </p>
                         </div>
                     </div>
                 </div>
@@ -28,7 +28,7 @@
                         <i class="fas fa-envelope fa-2x text-primary me-4"></i>
                         <div class="">
                             <h4>Mail Us</h4>
-                            <p class="mb-2">contact@auricletechnologies.com</p>
+                            <p class="mb-2">creatorsindia.com</p>
                         </div>
                     </div>
                 </div>

@@ -28,7 +28,7 @@ Route::controller(PageController::class)->group(function () {
     Route::get('/', 'home')->name('home');
     Route::get('/contact', 'contact')->name('contact');
     Route::get('participate', 'form')->name('form');
-    Route::get('sample', 'sample')->name('sample');
+    Route::get('programme', 'programme')->name('programme');
     Route::get('product', 'product')->name('product');
     Route::get('fabric', 'fabric')->name('fabric');
     Route::get('garment', 'garment')->name('garment');

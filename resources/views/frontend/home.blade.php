@@ -555,7 +555,7 @@
 
 
                     <div class="d-inline-block text-center wow fadeIn" data-wow-delay="0.1s">
-                        <a href="#" class="btn btn-primary px-5 py-3 text-white btn-border-radius" style="background-color: #003366; border-color: #003366;">View All Programs</a>
+                        <a href="programme" class="btn btn-primary px-5 py-3 text-white btn-border-radius" style="background-color: #003366; border-color: #003366;">View All Programs</a>
 
                     </div>
                 </div>
