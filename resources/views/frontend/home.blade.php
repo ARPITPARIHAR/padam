@@ -134,7 +134,7 @@
         }
 
         /* Style for custom heading */
-        .custom-heading {
+     .custom-heading {
     font-size: 2.5rem; /* Adjust as needed */
     font-weight: 700; /* Bold text */
     text-align: center; /* Center alignment */
@@ -224,7 +224,7 @@
                      /* Center align text */
                       margin-bottom: 1.5rem; /* Increased spacing below the heading */
                   ">
-                  Age Group 2: Teens & Adults (15 - above)
+                  Age Group 2: Teens & Adults (15 and above)
                   </h3>
 
                     <h4 class="text-dark mb-3">Theme: "Celebrate Traditional Games"</h4>
@@ -337,16 +337,27 @@
         </div>
 
         <!-- Proposed Rewards Section -->
-        <div class="section highlight-bg">
-            <h4 class="text-primary mb-4 text-center">प्रस्तावित पुरस्कार:</h4>
-            <ul class="text-dark mb-4 text-center list-icon">
-                <li>बच्चों के लिए: प्रमाणपत्र, कला आपूर्ति, या शैक्षिक किट।</li>
-                <li>किशोरों और वयस्कों के लिए: खेल गियर, तकनीकी उपकरण, या सांस्कृतिक कार्यक्रमों के टिकट।</li>
-            </ul>
-            <p class="text-dark mb-4 text-center">
-                छोटे बच्चों के लिए रचनात्मकता को जोड़ने और बड़े बच्चों के लिए सांस्कृतिक संरक्षण को मिलाकर, प्रतियोगिता एक व्यापक दृष्टिकोण प्रदान करती है।
-            </p>
-        </div>
+        <div class="section highlight-bg" style="
+        background-color: #f9f9f9; /* Light background color for the section */
+        border-radius: 12px; /* Rounded corners */
+        padding: 20px; /* Padding around the content */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow around the section */
+    ">
+        <h4 class="text-primary mb-4 text-center" style="font-size: 2rem; color: #007bff;">
+            Proposed Prizes / प्रस्तावित पुरस्कार:
+        </h4>
+        <ul class="text-dark mb-4 text-center list-icon" style="font-size: 1.1rem; line-height: 1.6;">
+            <li>For Children: Certificates, art supplies, or educational kits.</li>
+            <li>बच्चों के लिए: प्रमाणपत्र, कला आपूर्ति, या शैक्षिक किट।</li>
+            <li>For Teens and Adults: Sports gear, tech gadgets, or cultural event tickets.</li>
+            <li>किशोरों और वयस्कों के लिए: खेल गियर, तकनीकी उपकरण, या सांस्कृतिक कार्यक्रमों के टिकट।</li>
+        </ul>
+        <p class="text-dark mb-4 text-center" style="font-size: 1rem; line-height: 1.6;">
+            By combining creativity for the younger group and cultural preservation for the older group, the competition can attract a broad audience while keeping it fun and engaging!
+            छोटे बच्चों के लिए रचनात्मकता को जोड़ने और बड़े बच्चों के लिए सांस्कृतिक संरक्षण को मिलाकर, प्रतियोगिता एक व्यापक दृष्टिकोण प्रदान करती है।
+        </p>
+    </div>
+
     </div>
 </div>
 
