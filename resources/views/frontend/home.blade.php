@@ -135,7 +135,7 @@
 
         /* Style for custom heading */
      .custom-heading {
-    font-size: 2.5rem; /* Adjust as needed */
+    font-size: 2.1rem; /* Adjust as needed */
     font-weight: 700; /* Bold text */
     text-align: center; /* Center alignment */
     color: navy; /* Text color */
@@ -494,13 +494,13 @@
                         <div class="program-item rounded">
                             <div class="program-img position-relative">
                                 <div class="overflow-hidden img-border-radius">
-                                    <img src="img/program-3.jpg" class="img-fluid w-100" alt="Image">
+                                    <img src="img/funny.jpg" class="img-fluid w-100" alt="Image">
                                 </div>
 
                             </div>
                             <div class="program-text bg-white px-4 pb-3">
                                 <div class="program-text-inner">
-                                    <a href="#" class="h4">General Science</a>
+                                    <a href="#" class="h4">Fun Science Experiments</a>
 
                                 </div>
                             </div>
