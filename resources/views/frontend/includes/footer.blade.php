@@ -52,10 +52,10 @@
 </a>
 
                         <div class="footer-icon d-flex">
-                            <a class="btn btn-primary btn-sm-square me-3 rounded-circle text-white" href=""><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-primary btn-sm-square me-3 rounded-circle text-white" href=""><i class="fab fa-twitter"></i></a>
-                            <a href="#" class="btn btn-primary btn-sm-square me-3 rounded-circle text-white"><i class="fab fa-instagram"></i></a>
-                            <a href="#" class="btn btn-primary btn-sm-square rounded-circle text-white"><i class="fab fa-linkedin-in"></i></a>
+                            <a class="btn btn-secondary btn-sm-square me-3 rounded-circle text-white" href=""><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-secondary btn-sm-square me-3 rounded-circle text-white" href=""><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="btn btn-secondary btn-sm-square me-3 rounded-circle text-white"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="btn btn-secondary btn-sm-square rounded-circle text-white"><i class="fab fa-linkedin-in"></i></a>
                         </div>
                     </div>
                 </div>
