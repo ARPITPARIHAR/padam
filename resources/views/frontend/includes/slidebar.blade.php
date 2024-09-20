@@ -8,8 +8,8 @@
         <div class="col-lg-6 wow fadeIn" data-wow-delay="0.3s" style="display: flex; flex-direction: column; justify-content: center; padding: 0;"> <!-- Center content vertically -->
             <h1 class="text-dark mb-4 display-5 no-margin-top">Creators India YouTube Video Diwali Competition 2024</h1>
             <div class="button-container" style="margin-top: auto; display: flex; flex-direction: column; text-align:center!important;">
-                <a href="participate" class="btn btn-primary">Participate</a>
-                <a href="/" class="btn btn-primary">Login</a>
+                <a href="participate" class="btn btn-prima">Participate</a>
+                <a href="/" class="btn btn-prima">Login</a>
             </div>
         </div>
     </div>
@@ -22,7 +22,7 @@
     /* Full viewport height and center content */
 
     /* Styling for buttons */
-    .btn-primary {
+    .btn-prima {
     background-color: red; /* Solid red background */
     border-color: #003366; /* Dark blue border */
     color: #ffffff !important; /* White text color */
@@ -39,8 +39,8 @@
     margin-left:100px!important; /* Adds depth to the button */
 }
 
-.btn-primary:hover {
-    background-color: rgb(56, 13, 20) !important; /* Red background on hover */
+.btn-prima:hover {
+    background-color: black !important; /* Red background on hover */
     border-color: #000000; /* Black border on hover */
     color: #ffffff; /* Ensure text remains white on hover */
 }
