@@ -227,28 +227,9 @@ h6,
 
 
 /*** Hero Header ***/
-html, body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    width: 100%;
-}
 
-.hero-header {
-    background: url('../img/banner.jpeg') no-repeat center center;
-    background-size: cover;
-    width: 100%;
-    height: 200vh; /* Full viewport height */
-    position: relative;
-    display: flex;
-    align-items: center; /* Vertically center content */
-    justify-content: center; /* Horizontally center content */
-}
 
-.container {
-    position: relative;
-    z-index: 1; /* Ensure content is above the background image */
-}
+
 
 Hero Header ***/
 
@@ -465,7 +446,7 @@ Hero Header ***/
 
 /*** Programs Start ***/
 .program {
-    background: linear-gradient(rgb(142 218 232 / 10%), rgba(255, 72, 128, 0.1));
+    background: linear-gradient(rgb(142, 218, 232, 0.1), rgba(255, 72, 128, 0.1)) !important;
 }
 
 

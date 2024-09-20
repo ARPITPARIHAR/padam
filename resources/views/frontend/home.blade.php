@@ -61,19 +61,19 @@
 
         <style>
             /* Container and Layout */
-            .container-fluids {
+            /* .container-fluids {
                 max-width:100%; /* Increase max width for more space */
                 margin: 0 auto;
                 padding: 2rem;
                 box-sizing: border-box;
-            }
+            } */
 
-            .content-section {
+             .content-section {
                 margin: 0 auto;
                 padding: 20px; /* Add padding to the content section */
                 text-align: center; /* Center the content */
-            }
-
+            */
+             }
             .language-selector {
                 text-align: center;
                 margin-bottom: 2rem;
@@ -192,7 +192,7 @@
             }
 
             .highlight-bg ul {
-               
+
                 padding: 0;
                 font-size: 1.125rem; /* Slightly larger font size for list items */
                 line-height: 1.6;
@@ -378,15 +378,15 @@
 
                                 <li><strong>Submission Topics:</strong>
                                     <ul>
-                                        <li>पौधारोपण परियोजनाएं: दिखाएं कि आप कैसे बीज लगाते हैं या एक छोटे बगीचे की देखभाल करते हैं।</li>
-    <li>कागज की रचनात्मकता: कागज का उपयोग करके कुछ अद्भुत बनाएं (ओरिगेमी, क्राफ्ट आदि)।</li>
-    <li>मज़ेदार विज्ञान प्रयोग: घर पर सुरक्षित, सरल विज्ञान प्रयोग करें।</li>
-    <li>मज़ेदार गानों पर डांस: अपने रचनात्मक डांस मूव्स दिखाएं, जैसे कि माउसपूल "बाय बाय" गाने पर डांस कर रहा हो!</li>
-    <li>पालतू जानवरों के करतब: अपने पालतू जानवर को सिखाए गए मज़ेदार करतब दिखाएं।</li>
-    <li>Clay से अलग-अलग चीजें बनाना: Clay से मजेदार वस्तुएं बनाना।</li>
-    <li>जादू दिखाना: जादू की tricks दिखाना।</li>
-    <li>Comedy वीडियो: Mimicry आदि के वीडियो।</li>
-    <li>संगीत वाध्ययंत्र बजाना: बाँसुरी, हारमोनियम, गिटार आदि वाध्ययंत्र बजाना।</li>
+                                  <li>Plantation Projects: Show how you plant a seed or take care of a small garden.</li>
+    <li>Paper Creativity: Create something amazing using paper (origami, crafts, etc.).</li>
+    <li>Fun Science Experiments: Perform safe, simple science experiments at home.</li>
+    <li>Dancing to Fun Songs: Share your creative dance moves, like Mousepool dancing to "Bye Bye"!</li>
+    <li>Pet Tricks: Show off any fun tricks you’ve taught your pet.</li>
+    <li>Fun with Clay: Making objects with clay.</li>
+    <li>Magic Videos: Show tricks.</li>
+    <li>Comedy Videos: Mimicry etc.</li>
+    <li>Playing Musical Instruments: Play different musical instruments like Flute, Harmonium, Guitar etc.</li>
                                     </ul>
                                 </li>
                             </ul>
@@ -508,11 +508,12 @@
         </script>
 
 
-
-
     </div>
 </div>
 </div>
+
+
+
 
 
 
@@ -598,7 +599,7 @@
         </style>
 
 
-        <div class="container-fluid program  py-5">
+<div class="container-fluid program py-5" style="margin-top: 0px !important;">
             <div class="container py-5">
                 <div class="mx-auto text-center wow fadeIn" data-wow-delay="0.1s" style="max-width: 700px;">
                     <h4 class="text-primary mb-4 border-bottom border-primary border-2 d-inline-block p-2 title-border-radius">Our Programs</h4>
@@ -725,6 +726,9 @@
                 </div>
             </div>
         </div>
+    </div>
+</div>
+
         <!-- Program End -->
 
 

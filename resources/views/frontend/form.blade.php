@@ -13,25 +13,22 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <style>
-        body {
-            background:darkblue;
-            font-family: 'Poppins', sans-serif;
-            overflow-x: hidden;
-        }
-        .participation-form-container {
-            background: rgb(255, 255, 184);
-            border-radius: 15px;
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-            padding: 40px;
-            margin: 30px auto;
-            max-width: 800px;
-            position: relative;
-            overflow: hidden;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            animation: fadeInUp 1s ease-out;
-        }
-        .participation-form-container:hover {
-            transform: scale(1.05);
+
+.participation-form-container {
+    background: #840000;; /* Dark background color */
+    border-radius: 15px; /* Rounded corners for a smooth look */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    padding: 40px; /* Increased padding */
+    box-sizing: border-box; /* Include padding and border in total width */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition effects */
+    margin: 0px auto; /* Center the card with vertical margins */
+    max-width: 1800px; /* Maximum width for the card */
+   low the container to take up 90% of the width */
+    position: relative; /* Set position for any potential child elements */
+     /* Prevent overflow of child elements */
+    t/* Fade-in animation on load */
+}     .participation-form-container:hover {
+
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
         }
         @keyframes fadeInUp {
@@ -72,7 +69,7 @@
         }
         .participation-form-heading {
             font-size: 2.1rem;
-            color: #000305;
+            color: white;
             margin-bottom: 20px;
             text-align: center;
             font-weight: 600;
@@ -101,7 +98,7 @@
         }
         .form-group label {
             font-weight: 600;
-            color: black;
+            color: white;
             margin-bottom: 5px;
             display: block;
         }
@@ -118,7 +115,7 @@
             transform: scale(1.02);
         }
         .form-group .form-control::placeholder {
-            color: #aaa;
+            color: #992020;
         }
         .participation-form-button {
             background: linear-gradient(45deg, #28a745, #218838);
@@ -197,6 +194,40 @@
                         <label for="address">Address:</label>
                         <input type="text" class="form-control"  name="address"id="address" placeholder="Enter your address" required>
                     </div>
+                    <div class="form-group">
+                        <label for="age_group">Age Group:</label>
+                        <select class="form-control" name="age_group" id="age_group" required>
+                            <option value="">Select Age Group</option>
+                            <option value="5-12">5 to 15 years</option>
+                            <option value="15+">15 years and above</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="game_category">Game Category:</label>
+                        <select class="form-control" name="game_category" id="game_category" required>
+                            <option value="">Select Game Category</option>
+                            <option value="Plantation Projects">Plantation Projects</option>
+                            <option value="Paper Creativity">Paper Creativity</option>
+                            <option value="Fun Science Experiments">Fun Science Experiments</option>
+                            <option value="Dancing to Fun Songs">Dancing to Fun Songs</option>
+                            <option value="Pet Tricks">Pet Tricks</option>
+                            <option value="Fun with Clay">Fun with Clay</option>
+                            <option value="Magic Videos">Magic Videos</option>
+                            <option value="Comedy Videos">Comedy Videos</option>
+                            <option value="Playing Musical Instruments">Playing Musical Instruments</option>
+                            <option value="Kabaddi">Kabaddi</option>
+                            <option value="Kho-Kho">Kho-Kho</option>
+                            <option value="Pehal Dooj">Pehal Dooj</option>
+                            <option value="Langdi Tango Janjeer">Langdi Tango Janjeer</option>
+                            <option value="Satolia (Seven Stones)">Satolia (Seven Stones)</option>
+                            <option value="Marbles (Kanche)">Marbles (Kanche)</option>
+                            <option value="Janjeer">Janjeer</option>
+                            <option value="Carrom">Carrom</option>
+                            <option value="Gilli Danda">Gilli Danda</option>
+                        </select>
+                    </div>
+
                     <div class="form-group">
                         <label for="video">Upload Your Gaming Video:</label>
                         <input type="file" class="form-control" name="video" id="video" accept="video/*" required>

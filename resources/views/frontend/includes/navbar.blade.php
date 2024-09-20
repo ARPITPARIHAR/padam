@@ -1,5 +1,5 @@
-<div class="container-fluid border-bottom bg-light wow fadeIn" data-wow-delay="0.1s">
-    <div class="container topbar bg-primary d-none d-lg-block py-2" style="border-radius: 0 40px">
+<div class="container-fluid border-bottom bg-light wow fadeIn" data-wow-delay="0.1s" style="border-radius: 10px 10px ;">
+    <div class="container topbar bg-primary d-none d-lg-block py-2" style="border-radius: 2px 40px 0 40px;">
         <div class="d-flex justify-content-between">
             <div class="top-info ps-2">
                 <small class="me-3">
@@ -70,3 +70,11 @@
         </nav>
     </div>
 </div>
+
+<style>
+body {
+    margin-left: 210px !important;
+    margin-right: 210px !important;
+
+}
+</style>

@@ -104,10 +104,10 @@
 
 
 <!-- Copyright Start -->
-<div class="container-fluid copyright bg-dark py-4">
+<div class="container-fluid copyright bg-dark py-4" style="border-radius: 0 0 10px 10px;">
     <div class="container">
         <div class="row">
-            <div class="col-12 text-center mb-3 mb-md-0">
+            <div class="col-12 text-center mb-3 mb-md-0" >
                 <span class="text-light" style="color: white;">
                     <a href="/" style="color: white;">
                         <i class="fas fa-copyright me-2"></i>creaters-india.com
