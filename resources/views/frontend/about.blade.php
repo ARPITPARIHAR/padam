@@ -3,8 +3,8 @@
 @section('meta_description','Creators India | Participate and Showcase Your Creativity')
 @section('content')
 
-<div class="container-fluid py-5 " style="background-color: white">
-    <div class="container py-5">
+<div class="about-container" style="background-color: rgb(162, 246, 242)">
+    <div class="container py-5" style="background-color: #fffbe6">
         <div class="row g-5 align-items-center">
             <div class="col-lg-5 wow fadeIn" data-wow-delay="0.1s">
                 <div class="image border">

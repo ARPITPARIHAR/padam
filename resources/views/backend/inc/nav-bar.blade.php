@@ -5,9 +5,10 @@
             <a class="mobile-menu" id="mobile-collapse" href="#!">
                 <i class="feather icon-menu"></i>
             </a>
-            <a href="{{ route('dashboard') }}" id="text-link">
-                EVENT ON
+            <a href="{{ route('dashboard') }}" class="navbar-brand">
+                <h2 style="color:  rgb(186 245 241); font-weight: bold; font-size: 1.3rem;">Creators India</h2>
             </a>
+
 
             <a class="mobile-options">
                 <i class="feather icon-more-horizontal"></i>

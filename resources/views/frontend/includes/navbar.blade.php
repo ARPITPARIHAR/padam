@@ -23,7 +23,7 @@
     </div>
     <div class="container px-0">
         <nav class="navbar navbar-light navbar-expand-xl py-3">
-            <a href="index.html" class="navbar-brand">
+            <a href="/" class="navbar-brand">
                 <h2 style="color: darkblue; font-weight: bold; font-size: 2rem;">Creators India</h2>
             </a>
 
