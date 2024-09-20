@@ -8,10 +8,11 @@ use App\Http\Controllers\PageController;
 use Illuminate\Support\Facades\Response;
 
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\YouTubeController;
+
+
+
 use App\Http\Controllers\FileDownloadController;
-
-
-
 use App\Http\Controllers\Frontend\FormController;
 use App\Http\Controllers\Frontend\ContactController;
 use App\Http\Controllers\Backend\DashboardController;
@@ -29,16 +30,21 @@ Route::controller(PageController::class)->group(function () {
     Route::get('/contact', 'contact')->name('contact');
     Route::get('participate', 'form')->name('form');
     Route::get('programme', 'programme')->name('programme');
-    Route::get('product', 'product')->name('product');
+    Route::get('about', 'about')->name('about');
     Route::get('fabric', 'fabric')->name('fabric');
     Route::get('garment', 'garment')->name('garment');
-    Route::get('buyer', 'buyer')->name('buyer');
-    Route::get('vendor', 'vendor')->name('vendor');
-    Route::get('team', 'team')->name('team');
+
     Route::get('abouts', 'about')->name('abouts');
     Route::get('hostel-facility', 'hostel_facility')->name('hostelservice');
 
 });
+
+// routes/web.php
+
+Route::get('youtubeform', [YouTubeController::class, 'showForm']);
+Route::get('youtube', [YouTubeController::class, 'show']);
+
+
 
 
 Route::post('/contact-submit', [ContactController::class, 'submit'])->name('contact.submit');
@@ -60,3 +66,11 @@ Route::post('/contact/store', [ContactController::class, 'store'])->name('contac
 
 
 Route::get('/download/{fileName}', [FileDownloadController::class, 'download'])->name('document.download');
+
+
+Route::get('/phpinfo', function () {
+    ob_start();
+    phpinfo();
+    $phpinfo = ob_get_clean();
+    return response($phpinfo)->header('Content-Type', 'text/html');
+});

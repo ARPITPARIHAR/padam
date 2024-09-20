@@ -37,7 +37,7 @@
                 <div class="footer-item">
                     <h4 class=" mb-4 border-bottom border-primary border-2 d-inline-block p-2 title-border-radius">LOCATION</h4>
                     <div class="d-flex flex-column align-items-start">
-                        <div class="text-body mb-4"><i class="fa fa-map-marker-alt text-primary me-2"></i> 
+                        <div class="text-body mb-4"><i class="fa fa-map-marker-alt text-primary me-2"></i>
 
                             Bikaner (Rajasthan)
                             334003</div>
@@ -133,12 +133,39 @@
 </div>
 
 <!-- Back to Top -->
-<a href="#" class="btn btn-primary border-3 border-primary rounded-circle back-to-top"
-   style="background-color: black; color: white;">
-   <i class="fa fa-arrow-up" style="color: white;"></i>
-</a>
+<a href="#" class="btn-custom back-to-top">
+    <i class="fa fa-arrow-up"></i>
+ </a>
+
 
 <style>
+
+
+.btn-custom {
+    background-color: black; /* Black background */
+    color: white; /* White arrow color */
+    /* White border */
+    border-radius: 50%; /* Makes it a circle */
+    width: 50px; /* Width of the circle */
+    height: 50px; /* Height of the circle */
+    display: flex; /* Centers the icon */
+    align-items: center; /* Vertically centers the icon */
+    justify-content: center; /* Horizontally centers the icon */
+    position: fixed; /* Fixes the button on the screen */
+    bottom: 20px; /* Distance from the bottom */
+    right: 20px; /* Distance from the right */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Optional shadow effect */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.btn-custom:hover {
+    background-color: #ffd792; /* Darker shade on hover */
+}
+
+
+
+
+
     .footer {
         min-height: 300px; /* Minimum height for mobile screens */
         padding: 1rem;

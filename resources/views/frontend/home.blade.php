@@ -15,7 +15,7 @@
 
     </head>
 
-    <body>
+
 
         <!-- Spinner Start -->
         <div id="spinner" class="show w-100 vh-100 bg-white position-fixed translate-middle top-50 start-50  d-flex align-items-center justify-content-center">
@@ -56,310 +56,464 @@
 
         <!-- About Start -->
 
-<style>
 
-        /* Style for section containers */
-        .section {
-            background: #ffffff;
-            border-radius: 45px; /* Increased border-radius */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s; /* Added background-color transition */
-            padding: 20px; /* Optional: Add padding for spacing */
-            margin-bottom: 20px; /* Optional: Add margin for spacing between sections */
-        }
 
-        .section:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-            background-color: #f8f9fa; /* Light background color on hover for visual effect */
-        }
 
-        /* Style for section titles */
-        .section-title {
-            border-bottom: 3px solid #007bff;
-            padding-bottom: 10px;
-            margin-bottom: 20px;
-            font-weight: bold;
-            font-size: 1.5rem;
-        }
+        <style>
+            /* Container and Layout */
+            .container-fluids {
+                max-width:100%; /* Increase max width for more space */
+                margin: 0 auto;
+                padding: 2rem;
+                box-sizing: border-box;
+            }
 
-        /* Style for highlight background areas */
-        .highlight-bg {
-            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-            padding: 20px;
-            border-radius: 25px; /* Consistent border-radius */
-            margin-bottom: 20px;
-        }
+            .content-section {
+                margin: 0 auto;
+                padding: 20px; /* Add padding to the content section */
+                text-align: center; /* Center the content */
+            }
 
-        /* Style for list items with icons */
-        .list-icon li {
-            margin-bottom: 10px;
-        }
+            .language-selector {
+                text-align: center;
+                margin-bottom: 2rem;
+            }
 
-        .list-icon li::before {
-            content: '✔️';
-            margin-right: 10px;
-            color: #007bff;
-        }
+            .btn-lang {
+                background-color: #003366;
+                color: white;
+                border: none;
+                padding: 15px 30px; /* Increase button padding for larger size */
+                cursor: pointer;
+                margin: 0 10px;
+                border-radius: 8px;
+                font-size: 18px; /* Increase font size */
+                transition: background-color 0.3s ease, transform 0.3s ease;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add subtle shadow */
+            }
 
-        /* General text color classes */
-        .text-dark {
-            color: #333;
-        }
+            .btn-lang:hover {
+                background-color: #001a33;
+                transform: scale(1.05); /* Slightly enlarge the button on hover */
+            }
 
-        .text-primary {
-            color: #007bff;
-        }
+            /* Single Card for Both Age Groups */
+            .card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 12px; /* Increase border radius */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Increase shadow for a more pronounced effect */
+    padding: 40px; /* Increase padding for larger card */
+    box-sizing: border-box;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin: 20px auto; /* Center the card horizontally with auto margins */
+    max-width: 1000px; /* Set the max-width to control the card width */
+    width: 100%; /* Allow the card to take up full width up to max-width */
+    text-align: center; /* Center text inside the card */
+}
 
-        /* Flexbox styles for equal height rows and columns */
-        .row-equal {
-            display: flex;
-            flex-wrap: wrap;
-        }
+.card:hover {
+    transform: translateY(-10px); /* Lift the card on hover */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15); /* More pronounced shadow on hover */
+}
 
-        .col-equal {
-            display: flex;
-            flex-direction: column;
-        }
+.card h2 {
+    color: #d90e0e;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    font-size: 2.25rem; /* Increase font size */
+}
 
-        .card {
-            background: #ffffff;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            padding: 20px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-        }
+.card h3 {
+    color: #007bff;
+    font-weight: 400;
+    margin-bottom: 1.5rem;
+    font-size: 2.05rem;
 
-        /* Style for custom heading */
-     .custom-heading {
-    font-size: 2.1rem; /* Adjust as needed */
-    font-weight: 700; /* Bold text */
-    text-align: center; /* Center alignment */
-    color: navy; /* Text color */
-    margin: 1rem auto; /* Equal margin on left and right for horizontal centering */
-    padding: 0.5rem 1rem; /* Padding for internal spacing */
-    border-radius: 12px; /* Stylish corners */
-    display: block; /* Use block display to ensure proper centering */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Shadow around heading */
-    background-color: white; /* Background color for visibility */
-    /* Remove duplicate text-align property and ensure all properties are well-defined */
+
+}
+
+.card ul {
+    list-style-type: none; /* Remove default list markers */
+    padding: 0;
+    font-size: 1.125rem;
+    line-height: 1.6;
+    color: #333; /* Adjust text color for contrast */
+    margin: 0; /* Remove default margin */
+}
+
+.card ul li {
+    position: relative;
+    padding-left: 2rem; /* Space for the custom marker */
+    margin-bottom: 0.5rem; /* Space between list items */
+    text-align: left; /* Ensure text alignment is left */
+}
+
+.card ul li::before {
+    content: '\2022'; /* Unicode for a bullet (•), change to your desired symbol */
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%); /* Center the symbol vertically */
+    font-size: 1.5rem; /* Adjust size as needed */
+    color: #007bff; /* Color of the symbol, adjust as needed */
+}
+.card h4 {
+    font-size: 1.125rem; /* Adjust font size */
+    margin-bottom: 0.5rem; /* Space below the heading */
+    color: #333; /* Adjust text color */
+    text-align: center; /* Center align heading */
+}
+
+.card h4 strong {
+    font-weight: 700; /* Make bold text bold */
+}
+
+            /* Highlight Section */
+            .highlight-bg {
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    padding: 40px; /* Increase padding */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Increase shadow */
+    text-align: center;
+    max-width: 1000px; /* Set the max-width to control the highlight section width */
+    width: 100%; /* Allow the highlight section to take up full width up to max-width */
+    margin: 20px auto; /* Center the highlight section horizontally with auto margins */
+    padding-left: 50px; /* Ensure content is centered with respect to margins */
+    padding-right: 50px; /* Ensure content is centered with respect to margins */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
 }
 
 
-    </style>
+            .highlight-bg h4 {
+                font-size: 2.75rem; /* Increase font size */
+                color: #007bff;
+                font-weight: 700;
+            }
+
+            .highlight-bg ul {
+               
+                padding: 0;
+                font-size: 1.125rem; /* Slightly larger font size for list items */
+                line-height: 1.6;
+            }
+
+            .highlight-bg li {
+                margin-bottom: 0.5rem; /* Add spacing between list items */
+            }
+            .section-title {
+    position: relative;
+}
+
+
+.animated-line {
+    position: relative;
+    height: 3px;
+    background-color: #2e9b44;
+    margin: 0 auto; /* Centers the line horizontally */
+    width: 250px; /* Line width */
+    margin-top: -15px; /* Optional: Adds a small gap between h2 and line */
+}
+
+.moving-point {
+    position: absolute;
+    top: -5px; /* Adjust as needed to center the point vertically */
+    left: 0;
+    width: 10px;
+    height: 10px;
+    background-color: #103791;
+    border-radius: 50%;
+    animation: movePoint 2s linear infinite;
+}
+
+@keyframes movePoint {
+    0% { left: 0; }
+    50% { left: calc(100% - 10px); } /* Point moves to the end of the line */
+    100% { left: 0; }
+}
 
 
 
+            /* Responsive Design */
+            @media (max-width: 768px) {
+                .container-fluid {
+                    padding: 1rem;
+                }
+
+                .btn-lang {
+                    display: block;
+                    width: 100%;
+                    margin: 10px 0;
+                }
+
+                .content-section {
+                    margin: 0 15px; /* Adjusted margins for smaller screens */
+                }
+
+                .card {
+                    padding: 20px;
+                    margin: 0 15px; /* Reduced margins for small screens */
+                }
+
+                .highlight-bg {
+                    padding: 20px;
+                    margin: 15px; /* Adjusted margin for mobile view */
+                }
+            }
+        </style>
 
 
+        <div class="container-fluids py-5 about" style="background-image: url('img/2.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+            <!-- Language Selector -->
 
-<div class="container-fluid py-5 about" style="
-       background: linear-gradient(135deg, #fff3d3, #ffc371);
+            <h5 class=" custom-heading">Creators India YouTube Video Diwali Competition 2024</h5>
+            {{-- <div class="language-selector">
+                <button class="btn-lang" onclick="showContent('english')">English</button>
+                <button class="btn-lang" onclick="showContent('hindi')">Hindi</button>
+            </div> --}}
+
+            <!-- Content Section -->
+            <div class="content-section" id="content">
+
+                <!-- Single Container for Both Age Groups -->
+                <div class="card">
+
+                <div class="language-selector">
+                    <button class="btn-lang" onclick="showContent('english')">English</button>
+                    <button class="btn-lang" onclick="showContent('hindi')">Hindi</button>
+                </div>
 
 
+                    <h2 >Age Group 1: Children (5-14 years old)</h2>
+                    <div class="animated-line">
+                        <span class="moving-point"></span>
+                    </div>
 
 
-    <div class="container py-5">
-        <div class="row mb-4">
-            <div class="col-12 wow fadeIn" data-wow-delay="0.3s">
+                    <h3 class="text-dark mb-3">Theme: "Celebrate Traditional Games"</h3>
 
-                <h5 class=" custom-heading">Creators India YouTube Video Diwali Competition 2024</h5>
-            </div>
-        </div>
+                    <h4><strong>Video Format:</strong> YouTube Shorts (up to 30 seconds)</h4>
+                    <ul>
 
-        <!-- Age Groups -->
-        <div class="row row-equal">
-            <!-- English Age Groups Side by Side -->
-            <div class="col-lg-6 col-equal">
-                <div class="card wow fadeIn" data-wow-delay="0.3s">
-                    <h3 style="
-                  /* White background */
-                    color: #d90e0e; /* Dark text color for contrast */
-                    padding: 15px; /* Increased padding for more space around the text */
-                  /* Slightly larger rounded corners */
-                    /* More pronounced shadow for a lifted effect */
-                 /* Larger font size for emphasis */
-                    font-weight: 800; /* Bold text for prominence */
-                   /* Center align text */
-                    margin-bottom: 1.5rem; /* Increased spacing below the heading */
-                ">
-                    Age Group 1: Children (5-14 years old)
-                </h3>
-                    <h4 class="text-dark mb-3">Theme: "Express Your Creativity"</h4>
-                    <ul class="list-icon mb-4">
-                        <li><strong>Video Format:</strong> YouTube Shorts (up to 30 seconds)</li>
                         <li><strong>Submission Topics:</strong>
                             <ul>
-                                <li>Plantation Projects</li>
-                                <li>Paper Creativity</li>
-                                <li>Fun Science Experiments</li>
-                                <li>Dancing to Fun Songs</li>
-                                <li>Pet Tricks</li>
-                                <li>Fun with Clay</li>
-                                <li>Magic Videos</li>
-                                <li>Comedy Videos</li>
-                                <li>Playing Musical Instruments</li>
+                                <li>Plantation Projects: Show how you plant a seed or take care of a small garden.</li>
+    <li>Paper Creativity: Create something amazing using paper (origami, crafts, etc.).</li>
+    <li>Fun Science Experiments: Perform safe, simple science experiments at home.</li>
+    <li>Dancing to Fun Songs: Share your creative dance moves, like Mousepool dancing to "Bye Bye"!</li>
+    <li>Pet Tricks: Show off any fun tricks you’ve taught your pet.</li>
+    <li>Fun with Clay: Making objects with clay.</li>
+    <li>Magic Videos: Show tricks.</li>
+    <li>Comedy Videos: Mimicry etc.</li>
+    <li>Playing Musical Instruments: Play different musical instruments like Flute, Harmonium, Guitar etc.</li>
                             </ul>
                         </li>
                     </ul>
-                    <p class="text-dark mb-4">
-                        Encourage creativity and imagination, focusing on fun and learning.
-                    </p>
-                </div>
-            </div>
 
-            <div class="col-lg-6 col-equal">
-                <div class="card wow fadeIn" data-wow-delay="0.3s">
-                    <h3 style="
-                    /* White background */
-                      color: #d90e0e; /* Dark text color for contrast */
-                      padding: 15px; /* Increased padding for more space around the text */
-                    /* Slightly larger rounded corners */
-                      /* More pronounced shadow for a lifted effect */
-                   /* Larger font size for emphasis */
-                      font-weight: 800; /* Bold text for prominence */
-                     /* Center align text */
-                      margin-bottom: 1.5rem; /* Increased spacing below the heading */
-                  ">
-                  Age Group 2: Teens & Adults (15 and above)
-                  </h3>
+                    <hr>
 
-                    <h4 class="text-dark mb-3">Theme: "Celebrate Traditional Games"</h4>
-                    <ul class="list-icon mb-4">
-                        <li><strong>Video Format:</strong> Videos of any length up to 3 minutes.</li>
+
+                    <h2>Age Group 2: Teens & Adults (15 and above)</h2>
+                    <div class="animated-line">
+                        <span class="moving-point"></span>
+                    </div>
+
+                    <h3 class="text-dark mb-3">Theme: "Celebrate Traditional Games"</h3>
+                    <h4><strong>Video Format:</strong> Videos of any length up to 3 minutes.</h4>
+                    <ul>
+
                         <li><strong>Submission Topics:</strong>
                             <ul>
-                                <li>Kabaddi</li>
-                                <li>Kho-Kho</li>
-                                <li>Pehal Dooj</li>
-                                <li>Langdi Tang</li>
-                                <li>Janjeer</li>
-                                <li>Satolia (Seven Stones)</li>
-                                <li>Marbles (Kanche)</li>
-                                <li>Carrom</li>
-                                <li>Gilli Danda</li>
+                                <li>Kabaddi: Show a quick match of this fast-paced, traditional game.</li>
+    <li>Kho-Kho: Share a thrilling moment from a game of Kho-Kho.</li>
+    <li>Pehal Dooj: Highlight a traditional wrestling match.</li>
+    <li>Langdi Tang: Display your skills in this one-legged hopping game.</li>
+    <li>Janjeer: Introduce the chain tag game.</li>
+    <li>Satolia (Seven Stones): Show how you play this classic team game.</li>
+    <li>Marbles (Kanche): Show skills to play with marbles.</li>
+    <li>Carrom: Skills with striker to put coins (Goti) in holes.</li>
+    <li>Gilli Danda: How to play this traditional game.</li>
                             </ul>
                         </li>
                     </ul>
-                    <p class="text-dark mb-4">
-                        This group focuses on preserving and promoting cultural heritage through traditional games.
-                    </p>
+                </div>
+
+                <!-- Rewards Section -->
+                <div class="highlight-bg">
+                    <h4 class="text-primary mb-4 text-center" style="font-size: 2rem; color: #007bff;">
+                        Proposed Prizes / प्रस्तावित पुरस्कार:
+                    </h4>
+                    <div class="animated-line">
+                        <span class="moving-point"></span>
+                    </div>
+                    <ul>
+                        <li>For Children: Certificates, art supplies, or educational kits.</li>
+                        <li>For Teens and Adults: Sports gear, tech gadgets, or cultural event tickets.</li>
+                        <li>By combining creativity for the younger group and cultural preservation for the older group, the competition can attract a broad audience while keeping it fun and engaging!</li>
+                    </ul>
                 </div>
             </div>
         </div>
 
-        <!-- Hindi Sections -->
-        <div class="row row-equal">
-            <!-- Hindi Age Group 1 -->
-            <div class="col-lg-6 col-equal">
-                <div class="card wow fadeIn" data-wow-delay="0.3s">
-                    <h3 style="
-                    /* White background */
-                      color: #d90e0e; /* Dark text color for contrast */
-                      padding: 15px; /* Increased padding for more space around the text */
-                    /* Slightly larger rounded corners */
-                      /* More pronounced shadow for a lifted effect */
-                   /* Larger font size for emphasis */
-                      font-weight: 800; /* Bold text for prominence */
-                     /* Center align text */
-                      margin-bottom: 1.5rem; /* Increased spacing below the heading */
-                  ">
-               आयु वर्ग 1: बच्चे (5-14 वर्ष)
-                  </h3>
+        <script>
+            function showContent(language) {
+                var content = document.getElementById('content');
 
+                if (language === 'english') {
+                    content.innerHTML = `
+                        <div class="card">
 
-                    <h4 class="text-dark mb-3">थीम: "अपनी रचनात्मकता दिखाएं"</h4>
-                    <ul class="list-icon mb-4">
-                        <li>वीडियो फॉर्मेट: YouTube Shorts (15 सेकंड तक)</li>
-                        <li>जमा करने के विषय:
-                            <ul>
-                                <li>पौधारोपण परियोजनाएं</li>
-                                <li>कागज की रचनात्मकता</li>
-                                <li>मज़ेदार विज्ञान प्रयोग</li>
-                                <li>मज़ेदार गानों पर डांस</li>
-                                <li>पालतू जानवरों के करतब</li>
-                                <li>Clay से अलग-अलग चीजें बनाना</li>
-                                <li>मैजिक वीडियो</li>
-                                <li>कॉमेडी वीडियो</li>
-                                <li>संगीत वाद्ययंत्र बजाना</li>
-                            </ul>
-                        </li>
-                    </ul>
-                    <p class="text-dark mb-4">
-                        रचनात्मकता और कल्पना को प्रोत्साहित करें, मज़े और सीखने पर ध्यान केंद्रित करें।
-                    </p>
+                            <div class="language-selector">
+                    <button class="btn-lang" onclick="showContent('english')">English</button>
+                    <button class="btn-lang" onclick="showContent('hindi')">Hindi</button>
                 </div>
-            </div>
+                            <h2>Age Group 1: Children (5-14 years old)</h2>
+                               <div class="animated-line">
+                        <span class="moving-point"></span>
+                    </div>
 
-            <!-- Hindi Age Group 2 -->
-            <div class="col-lg-6 col-equal">
-                <div class="card wow fadeIn" data-wow-delay="0.3s">
-                    <h3 style="
-                    /* White background */
-                      color: #d90e0e; /* Dark text color for contrast */
-                      padding: 15px; /* Increased padding for more space around the text */
-                    /* Slightly larger rounded corners */
-                      /* More pronounced shadow for a lifted effect */
-                   /* Larger font size for emphasis */
-                      font-weight: 800; /* Bold text for prominence */
-                     /* Center align text */
-                      margin-bottom: 1.5rem; /* Increased spacing below the heading */
-                  ">
-               आयु वर्ग 2: किशोर और वयस्क (15 वर्ष और ऊपर)
-                  </h3>
-
-
-                    <h4 class="text-dark mb-3">थीम: "पारंपरिक खेलों का उत्सव"</h4>
-                    <ul class="list-icon mb-4">
-                        <li>वीडियो फॉर्मेट: किसी भी लंबाई के वीडियो, 3 मिनट तक।</li>
-                        <li>जमा करने के विषय:
+                            <h3 class="text-dark mb-3">Theme: "Express Your Creativity"</h3>
+                               <h4><strong>Video Format:</strong> YouTube Shorts (up to 30 seconds)</h4>
                             <ul>
-                                <li>कबड्डी</li>
-                                <li>खो-खो</li>
-                                <li>पहेल दूज</li>
-                                <li>लंगड़ी टांग</li>
-                                <li>जंजीर</li>
-                                <li>सातोलीया (सात पत्थर)</li>
-                                <li>गिट्टी</li>
-                                <li>कैरम</li>
-                                <li>गिली डंडा</li>
-                            </ul>
-                        </li>
-                    </ul>
-                    <p class="text-dark mb-4">
-                        यह समूह पारंपरिक खेलों के माध्यम से सांस्कृतिक धरोहर को संरक्षित करने और बढ़ावा देने पर केंद्रित है।
-                    </p>
-                </div>
-            </div>
-        </div>
 
-        <!-- Proposed Rewards Section -->
-        <div class="section highlight-bg" style="
-        background-color: #f9f9f9; /* Light background color for the section */
-        border-radius: 12px; /* Rounded corners */
-        padding: 20px; /* Padding around the content */
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow around the section */
-    ">
-        <h4 class="text-primary mb-4 text-center" style="font-size: 2rem; color: #007bff;">
+                                <li><strong>Submission Topics:</strong>
+                                    <ul>
+                                        <li>पौधारोपण परियोजनाएं: दिखाएं कि आप कैसे बीज लगाते हैं या एक छोटे बगीचे की देखभाल करते हैं।</li>
+    <li>कागज की रचनात्मकता: कागज का उपयोग करके कुछ अद्भुत बनाएं (ओरिगेमी, क्राफ्ट आदि)।</li>
+    <li>मज़ेदार विज्ञान प्रयोग: घर पर सुरक्षित, सरल विज्ञान प्रयोग करें।</li>
+    <li>मज़ेदार गानों पर डांस: अपने रचनात्मक डांस मूव्स दिखाएं, जैसे कि माउसपूल "बाय बाय" गाने पर डांस कर रहा हो!</li>
+    <li>पालतू जानवरों के करतब: अपने पालतू जानवर को सिखाए गए मज़ेदार करतब दिखाएं।</li>
+    <li>Clay से अलग-अलग चीजें बनाना: Clay से मजेदार वस्तुएं बनाना।</li>
+    <li>जादू दिखाना: जादू की tricks दिखाना।</li>
+    <li>Comedy वीडियो: Mimicry आदि के वीडियो।</li>
+    <li>संगीत वाध्ययंत्र बजाना: बाँसुरी, हारमोनियम, गिटार आदि वाध्ययंत्र बजाना।</li>
+                                    </ul>
+                                </li>
+                            </ul>
+
+                            <hr>
+
+                            <h2>Age Group 2: Teens & Adults (15 and above)</h2>
+                               <div class="animated-line">
+                        <span class="moving-point"></span>
+                    </div>
+
+                            <h3 class="text-dark mb-3">Theme: "Celebrate Traditional Games"</h3>
+                               <h4><strong>Video Format:</strong> Videos of any length up to 3 minutes.</h4>
+                            <ul>
+
+                                <li><strong>Submission Topics:</strong>
+                                    <ul>
+                                        <li>Kabaddi: Show a quick match of this fast-paced, traditional game.</li>
+    <li>Kho-Kho: Share a thrilling moment from a game of Kho-Kho.</li>
+    <li>Pehal Dooj: Highlight a traditional wrestling match.</li>
+    <li>Langdi Tang: Display your skills in this one-legged hopping game.</li>
+                                        <li>Janjeer: Introduce the chain tag game.</li>
+    <li>Satolia (Seven Stones): Show how you play this classic team game.</li>
+    <li>Marbles (Kanche): Show skills to play with marbles.</li>
+    <li>Carrom: Skills with striker to put coins (Goti) in holes.</li>
+    <li>Gilli Danda: How to play this traditional game.</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="highlight-bg">
+                         <h4 class="text-primary mb-4 text-center" style="font-size: 2rem; color: #007bff;">
+            Proposed Prizes / प्रस्तावित पुरस्कार:
+        </h4> <div class="animated-line">
+                        <span class="moving-point"></span>
+                    </div>
+                            <ul>
+                                <li>For Children: Certificates, art supplies, or educational kits.</li>
+                                <li>For Teens and Adults: Sports gear, tech gadgets, or cultural event tickets.</li>
+                                 <li>By combining creativity for the younger group and cultural preservation for the older group, the competition can attract a broad audience while keeping it fun and engaging!</li>
+                            </ul>
+                        </div>
+                    `;
+                } else {
+                    content.innerHTML = `
+                        <div class="card">
+                            <div class="language-selector">
+                    <button class="btn-lang" onclick="showContent('english')">English</button>
+                    <button class="btn-lang" onclick="showContent('hindi')">Hindi</button>
+                </div>
+                            <h2>आयु वर्ग 1: बच्चे (5-14 वर्ष)</h2>
+                               <div class="animated-line">
+                        <span class="moving-point"></span>
+                    </div>
+
+                            <h3>विषय: "अपनी रचनात्मकता दिखाएं"</h3>
+                            <h4>वीडियो फॉर्मेट: YouTube Shorts (30 सेकंड तक)</h4>
+                            <ul>
+
+                                <li>जमा करने के विषय:
+                                    <ul>
+                                        <li>पौधारोपण परियोजनाएं: दिखाएं कि आप कैसे बीज लगाते हैं या एक छोटे बगीचे की देखभाल करते हैं।</li>
+    <li>कागज की रचनात्मकता: कागज का उपयोग करके कुछ अद्भुत बनाएं (ओरिगेमी, क्राफ्ट आदि)।</li>
+    <li>मज़ेदार विज्ञान प्रयोग: घर पर सुरक्षित, सरल विज्ञान प्रयोग करें।</li>
+    <li>मज़ेदार गानों पर डांस: अपने रचनात्मक डांस मूव्स दिखाएं, जैसे कि माउसपूल "बाय बाय" गाने पर डांस कर रहा हो!</li>
+    <li>पालतू जानवरों के करतब: अपने पालतू जानवर को सिखाए गए मज़ेदार करतब दिखाएं।</li>
+    <li>Clay से अलग-अलग चीजें बनाना: Clay से मजेदार वस्तुएं बनाना।</li>
+    <li>जादू दिखाना: जादू की tricks दिखाना।</li>
+    <li>Comedy वीडियो: Mimicry आदि के वीडियो।</li>
+    <li>संगीत वाध्ययंत्र बजाना: बाँसुरी, हारमोनियम, गिटार आदि वाध्ययंत्र बजाना।</li>
+                                    </ul>
+                                </li>
+                            </ul>
+
+                            <hr>
+
+                            <h2>आयु वर्ग 2: किशोर और वयस्क (15 और उससे ऊपर)</h2>
+                               <div class="animated-line">
+                        <span class="moving-point"></span>
+                    </div>
+
+                            <h3>विषय: "पारंपरिक खेलों का जश्न"</h3>
+                            <h4>वीडियो फॉर्मेट: 3 मिनट तक के वीडियो</h4>
+                            <ul>
+
+                                <li>जमा करने के विषय:
+                                    <ul>
+                                    <li>कबड्डी: इस तेज़-तर्रार, पारंपरिक खेल का एक त्वरित मैच दिखाएं।</li>
+    <li>खो-खो: खो-खो खेल का एक रोमांचक पल साझा करें।</li>
+    <li>पहल दूज: एक पारंपरिक कुश्ती मैच को हाइलाइट करें।</li>
+    <li>लंगड़ी टांग: इस एक पैर पर कूदने वाले खेल में अपनी कुशलता दिखाएं।</li>
+    <li>जंजीर: चेन टैग खेल को प्रस्तुत करें।</li>
+    <li>सातोलिया (सात पत्थर): इस क्लासिक टीम खेल को कैसे खेलते हैं, यह दिखाएं।</li>
+    <li>कंचे: कंचों से खेलने का कौशल दिखाना।</li>
+    <li>कैरम: स्ट्राइकर के साथ छेद में गोटी डालने का कौशल।</li>
+    <li>गिल्ली डंडा: गिल्ली डंडा कैसे खेले।</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="highlight-bg">
+                           <h4 class="text-primary mb-4 text-center" style="font-size: 2rem; color: #007bff;">
             Proposed Prizes / प्रस्तावित पुरस्कार:
         </h4>
-        <ul class="text-dark mb-4 text-center list-icon" style="font-size: 1.1rem; line-height: 1.6;">
-            <li>For Children: Certificates, art supplies, or educational kits.</li>
-            <li>बच्चों के लिए: प्रमाणपत्र, कला आपूर्ति, या शैक्षिक किट।</li>
-            <li>For Teens and Adults: Sports gear, tech gadgets, or cultural event tickets.</li>
-            <li>किशोरों और वयस्कों के लिए: खेल गियर, तकनीकी उपकरण, या सांस्कृतिक कार्यक्रमों के टिकट।</li>
-        </ul>
-        <p class="text-dark mb-4 text-center" style="font-size: 1rem; line-height: 1.6;">
-            By combining creativity for the younger group and cultural preservation for the older group, the competition can attract a broad audience while keeping it fun and engaging!
-            छोटे बच्चों के लिए रचनात्मकता को जोड़ने और बड़े बच्चों के लिए सांस्कृतिक संरक्षण को मिलाकर, प्रतियोगिता एक व्यापक दृष्टिकोण प्रदान करती है।
-        </p>
-    </div>
+         <div class="animated-line">
+                        <span class="moving-point"></span>
+                    </div>
+                            <ul>
+                                <li>बच्चों के लिए: प्रमाण पत्र, कला सामग्री, या शैक्षिक किट।</li>
+                                <li>किशोर और वयस्कों के लिए: खेल उपकरण, तकनीकी गैजेट्स, या सांस्कृतिक कार्यक्रमों के टिकट।</li>
+                               <li> छोटे बच्चों के लिए रचनात्मकता और बड़े आयु वर्ग के लिए सांस्कृतिक धरोहर को मिलाकर, प्रतियोगिता को मनोरंजक और आकर्षक बनाया जा सकता है!</li>
+                            </ul>
+                        </div>
+                    `;
+                }
+            }
+        </script>
+
+
+
 
     </div>
 </div>
+</div>
+
 
 
 
@@ -926,6 +1080,45 @@
     </body>
 
 </html>
+
+
+<style>
+
+    /* Style for section containers */
+
+
+    /* Style for section titles */
+
+    /* Style for highlight background areas */
+
+
+    /* Style for list items with icons */
+
+    /* General text color classes */
+
+
+
+
+
+    /* Style for custom heading */
+    .custom-heading {
+    font-size: 2.1rem; /* Adjust as needed */
+    font-weight: 700; /* Bold text */
+    text-align: center; /* Center alignment */
+    color: navy; /* Text color */
+    margin-top: 0px !important; /* Top margin with !important */
+    margin-bottom: 1rem; /* Bottom margin */
+    padding: 0.5rem 1rem; /* Padding for internal spacing */
+    border-radius: 12px; /* Stylish corners */
+    display: block; /* Use block display to ensure proper centering */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Shadow around heading */
+    background-color: white; /* Background color for visibility */
+}
+
+
+
+</style>
+
 
 @endsection
 @section('style')

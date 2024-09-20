@@ -25,9 +25,9 @@ class PageController extends Controller
     {
         return view('frontend.form');
     }
-    public function product(Request $request)
+    public function about(Request $request)
     {
-        return view('frontend.products');
+        return view('frontend.about');
     }
 
     public function programme(Request $request)

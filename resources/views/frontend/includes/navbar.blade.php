@@ -4,7 +4,7 @@
             <div class="top-info ps-2">
                 <small class="me-3">
                     <i class="fas fa-map-marker-alt me-2" style="color: white;"></i>
-                     <a href="#" class="text-white"> Bikaner (Rajasthan), 334003</a> 
+                     <a href="#" class="text-white"> Bikaner (Rajasthan), 334003</a>
                 </small>
 
                     <small class="me-3">
@@ -34,10 +34,12 @@
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav mx-auto">
                     <a href="/" class="nav-item nav-link active">Home</a>
-                    <a href="about.html" class="nav-item nav-link">About</a>
+                    <a href="about" class="nav-item nav-link">About</a>
                     <a href="participate" class="nav-item nav-link">Services</a>
                     <a href="programme" class="nav-item nav-link">Programs</a>
-                    <a href="event.html" class="nav-item nav-link">Events</a>
+                    <a href="youtubeform" class="nav-item nav-link">Events</a>
+
+
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
                         <div class="dropdown-menu m-0 bg-secondary rounded-0">
