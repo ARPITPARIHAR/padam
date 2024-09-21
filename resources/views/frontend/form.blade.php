@@ -15,14 +15,14 @@
     <style>
 
 .participation-form-container {
-    background: #840000;; /* Dark background color */
+    background: #386eac; /* Dark background color */
     border-radius: 15px; /* Rounded corners for a smooth look */
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
     padding: 40px; /* Increased padding */
     box-sizing: border-box; /* Include padding and border in total width */
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition effects */
-    margin: 0px auto; /* Center the card with vertical margins */
-    max-width: 1800px; /* Maximum width for the card */
+    /* Center the card with vertical margins */
+    width: 100%; /* Maximum width for the card */
    low the container to take up 90% of the width */
     position: relative; /* Set position for any potential child elements */
      /* Prevent overflow of child elements */
@@ -68,7 +68,7 @@
             }
         }
         .participation-form-heading {
-            font-size: 2.1rem;
+            font-size: 1.8rem;
             color: white;
             margin-bottom: 20px;
             text-align: center;
@@ -82,7 +82,7 @@
             display: block;
             width: 80px;
             height: 4px;
-            background: #007bff;
+            background: #fafcff;
             margin: 10px auto;
             border-radius: 5px;
             transform: scaleX(0);
@@ -97,7 +97,7 @@
             z-index: 1;
         }
         .form-group label {
-            font-weight: 600;
+            font-weight: 650;
             color: white;
             margin-bottom: 5px;
             display: block;
@@ -115,7 +115,7 @@
             transform: scale(1.02);
         }
         .form-group .form-control::placeholder {
-            color: #992020;
+            color: black;
         }
         .participation-form-button {
             background: linear-gradient(45deg, #28a745, #218838);
@@ -168,12 +168,13 @@
 </head>
 <body>
 
-<div class="container">
+<div class="container" style="width:100%; background:#e0f7fa;
+">
     <div class="row justify-content-center">
-        <div class="col-lg-10">
+        <div class="col-lg-8">
             <div class="participation-form-container">
                 <h class="participation-form-heading">Participate & Win Amazing Rewards!</h>
-                <form action="{{ route('form.submit') }}" method="POST"  enctype="multipart/form-data">
+                <form action="{{ route('form.submit') }}" method="POST"  >
                     @csrf
 
 
@@ -190,47 +191,51 @@
                         <label for="contact">Contact Number:</label>
                         <input type="tel" class="form-control" name="number" id="contact" placeholder="Enter your contact number" required>
                     </div>
-                    <div class="form-group">
+                    {{-- <div class="form-group">
                         <label for="address">Address:</label>
                         <input type="text" class="form-control"  name="address"id="address" placeholder="Enter your address" required>
-                    </div>
+                    </div> --}}
                     <div class="form-group">
                         <label for="age_group">Age Group:</label>
-                        <select class="form-control" name="age_group" id="age_group" required>
+                        <select class="form-control" name="age" id="age_group" required>
                             <option value="">Select Age Group</option>
-                            <option value="5-12">5 to 15 years</option>
-                            <option value="15+">15 years and above</option>
+                            <option value="5-15Age">5 to 15 years</option>
+                            <option value="15+ Above">15 years and above</option>
                         </select>
                     </div>
-
                     <div class="form-group">
-                        <label for="game_category">Game Category:</label>
+                        <label for="game_category">Video Category:</label>
                         <select class="form-control" name="game_category" id="game_category" required>
                             <option value="">Select Game Category</option>
-                            <option value="Plantation Projects">Plantation Projects</option>
-                            <option value="Paper Creativity">Paper Creativity</option>
-                            <option value="Fun Science Experiments">Fun Science Experiments</option>
-                            <option value="Dancing to Fun Songs">Dancing to Fun Songs</option>
-                            <option value="Pet Tricks">Pet Tricks</option>
-                            <option value="Fun with Clay">Fun with Clay</option>
-                            <option value="Magic Videos">Magic Videos</option>
-                            <option value="Comedy Videos">Comedy Videos</option>
-                            <option value="Playing Musical Instruments">Playing Musical Instruments</option>
-                            <option value="Kabaddi">Kabaddi</option>
-                            <option value="Kho-Kho">Kho-Kho</option>
-                            <option value="Pehal Dooj">Pehal Dooj</option>
-                            <option value="Langdi Tango Janjeer">Langdi Tango Janjeer</option>
-                            <option value="Satolia (Seven Stones)">Satolia (Seven Stones)</option>
-                            <option value="Marbles (Kanche)">Marbles (Kanche)</option>
-                            <option value="Janjeer">Janjeer</option>
-                            <option value="Carrom">Carrom</option>
-                            <option value="Gilli Danda">Gilli Danda</option>
+                            @foreach (\App\Models\Category::all() as $category)
+                                <option value="{{ $category->category }}">{{ $category->category }}</option>
+                            @endforeach
+                            <option value="custom">Choose Your Own</option>
                         </select>
                     </div>
 
+                    <div class="form-group" id="custom_category_group" style="display:none;">
+                        <label for="custom_category">Enter Your Own Category:</label>
+                        <input type="text" class="form-control" name="custom_game_category" id="custom_category" placeholder="Enter your category">
+                    </div>
+
+                    <script>
+                    document.getElementById('game_category').addEventListener('change', function() {
+                        var customCategoryGroup = document.getElementById('custom_category_group');
+                        if (this.value === 'custom') {
+                            customCategoryGroup.style.display = 'block';
+                        } else {
+                            customCategoryGroup.style.display = 'none';
+                        }
+                    });
+                    </script>
+
+
+
+
                     <div class="form-group">
-                        <label for="video">Upload Your Gaming Video:</label>
-                        <input type="file" class="form-control" name="video" id="video" accept="video/*" required>
+                        <label for="video Link"> Your Gaming Video Link:</label>
+                        <input type="text" class="form-control" name="link" id="video" placeholder="Gaming Video Link"  required>
                     </div>
                     <div class="form-group">
                         <label for="message">Additional Information:</label>
@@ -253,7 +258,27 @@
 </div>
 @endif
 
+
+
 <script>
+    document.getElementById('game_category').addEventListener('change', function () {
+        var customCategoryGroup = document.getElementById('custom_category_group');
+        if (this.value === 'custom') {
+            customCategoryGroup.style.display = 'block';
+            document.getElementById('custom_category').setAttribute('required', 'required');
+        } else {
+            customCategoryGroup.style.display = 'none';
+            document.getElementById('custom_category').removeAttribute('required');
+        }
+    });
+</script>
+
+<script>
+
+
+
+
+
 document.addEventListener('DOMContentLoaded', function () {
   const flashMessage = document.getElementById('flashMessage');
   const form = document.getElementById('form');
@@ -321,7 +346,7 @@ document.addEventListener('DOMContentLoaded', function () {
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    background: linear-gradient(to right, rgb(249 29 226 / 80%), rgb(31 255 253 / 80%)); /* New gradient */
+    background: black; /* New gradient */
     padding: 2rem;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -339,7 +364,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 .flash-message p {
     margin-bottom: 2.5rem;
-    color:black; /* Softer white for the paragraph */
+    color:white; /* Softer white for the paragraph */
 }
 
 .flash-message img {

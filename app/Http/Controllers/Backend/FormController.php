@@ -12,7 +12,7 @@ class FormController extends Controller
 
     public function index()
     {
-        $participations = Form::paginate(15); // Example: Paginate with 10 contacts per page
+        $participations = Form::paginate(5); // Example: Paginate with 10 contacts per page
 
         return view('backend.form.index', compact('participations'));
     }

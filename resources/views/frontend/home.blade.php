@@ -250,18 +250,99 @@
                     margin: 0 15px; /* Adjusted margins for smaller screens */
                 }
 
-                .card {
-                    padding: 20px;
-                    margin: 0 15px; /* Reduced margins for small screens */
-                }
+                 .card {
+        padding: 20px; /* Reduced padding for mobile */
+        margin: 10px auto; /* Ensure equal margins on both left and right */
+        max-width: 100%; /* Full-width for mobile */
+        box-sizing: border-box; /* Ensures padding is included in the width */
+        font-size: 1rem; /* Reduce font size for better readability */
+    }
 
                 .highlight-bg {
                     padding: 20px;
                     margin: 15px; /* Adjusted margin for mobile view */
                 }
             }
-        </style>
 
+           /* Mobile First Styling - Adjusting for smaller screens */
+@media (max-width: 768px) {
+
+    /* Container and Layout Adjustments */
+    .content-section {
+        margin: 0 10px; /* Adjusted margins for smaller screens */
+        padding: 15px; /* Reduced padding for mobile view */
+    }
+
+    .btn-lang {
+        display: block;
+        width: 100%; /* Full-width buttons for easier tapping on mobile */
+        margin: 10px 0; /* Spacing between buttons */
+        padding: 10px 20px; /* Reduced padding for better mobile fit */
+        font-size: 16px; /* Adjusted font size for mobile screens */
+    }
+
+    /* Card Section Adjustments */
+     .card {
+        padding: 15px; /* Reduce padding further for smaller screens */
+        margin: 10px auto; /* Keep equal margins on both sides */
+        max-width: 100%; /* Ensure full width on very small screens */
+    }
+    .card h2, .card h3 {
+        font-size: 1.75rem; /* Decrease header size for mobile */
+    }
+
+    .card ul li::before {
+        font-size: 1.2rem; /* Slightly reduce bullet size */
+    }
+
+    /* Highlight Section Adjustments */
+    .highlight-bg {
+        padding: 20px;
+        margin: 15px; /* Adjusted margin for mobile view */
+        max-width: 100%; /* Full-width for mobile */
+    }
+
+    .highlight-bg h4 {
+        font-size: 2rem; /* Adjusted font size */
+    }
+
+    /* Section Title Adjustments */
+    .animated-line {
+        width: 150px; /* Reduced line width for mobile */
+    }
+
+    /* Moving point animation remains the same for mobile */
+}
+
+/* Smaller Mobile Devices */
+@media (max-width: 480px) {
+    .btn-lang {
+        padding: 8px 16px; /* Smaller padding for smaller screens */
+        font-size: 14px; /* Adjust button text size */
+    }
+
+    .card h2, .card h3 {
+        font-size: 1.5rem; /* Further reduce header size for very small screens */
+    }
+
+    .card ul {
+        font-size: 1rem; /* Further reduce list font size for better fit */
+    }
+
+    .highlight-bg h4 {
+        font-size: 1.5rem; /* Decrease header size for smaller mobile */
+    }
+
+        .highlight-bg {
+        padding: 15px; /* Reduce padding further for smaller screens */
+        margin: 10px auto; /* Ensure equal margins on both sides */
+        max-width: 100%; /* Full width on small devices */
+    }
+
+
+
+
+        </style>
 
         <div class="container-fluids py-5 about" style="background-image: url('img/2.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
             <!-- Language Selector -->
@@ -326,7 +407,7 @@
                             <ul>
                                 <li>Kabaddi: Show a quick match of this fast-paced, traditional game.</li>
     <li>Kho-Kho: Share a thrilling moment from a game of Kho-Kho.</li>
-    <li>Pehal Dooj: Highlight a traditional wrestling match.</li>
+    <li>Pehal Dooj: focused on crossing a marked line by maintaining perfect body balance..</li>
     <li>Langdi Tang: Display your skills in this one-legged hopping game.</li>
     <li>Janjeer: Introduce the chain tag game.</li>
     <li>Satolia (Seven Stones): Show how you play this classic team game.</li>
@@ -406,7 +487,7 @@
                                     <ul>
                                         <li>Kabaddi: Show a quick match of this fast-paced, traditional game.</li>
     <li>Kho-Kho: Share a thrilling moment from a game of Kho-Kho.</li>
-    <li>Pehal Dooj: Highlight a traditional wrestling match.</li>
+    <li>Pehal Dooj: focused on crossing a marked line by maintaining perfect body balance.</li>
     <li>Langdi Tang: Display your skills in this one-legged hopping game.</li>
                                         <li>Janjeer: Introduce the chain tag game.</li>
     <li>Satolia (Seven Stones): Show how you play this classic team game.</li>

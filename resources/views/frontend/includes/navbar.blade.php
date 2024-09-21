@@ -73,8 +73,13 @@
 
 <style>
 body {
-    margin-left: 210px !important;
-    margin-right: 210px !important;
+    margin: 0; /* सभी स्क्रीन के लिए शुरुआती मार्जिन 0 सेट करें */
+}
 
+@media (min-width: 768px) { /* 768px से अधिक स्क्रीन साइज़ के लिए */
+    body {
+        margin-left: 210px;
+        margin-right: 210px;
+    }
 }
 </style>

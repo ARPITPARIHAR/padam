@@ -1,18 +1,19 @@
 <?php
 
+use App\Http\Middleware\IsAdmin;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\Backend\FormController;
 use App\Http\Controllers\Backend\NewsController;
 use App\Http\Controllers\Backend\RoomController;
 use App\Http\Controllers\Backend\AboutController;
+use App\Http\Controllers\Backend\BuyerController;
 use App\Http\Controllers\Backend\BannerController;
 use App\Http\Controllers\Backend\SampleController;
-use App\Http\Controllers\Backend\BuyerController;
 use App\Http\Controllers\Backend\VendorController;
-use App\Http\Controllers\Backend\FormController;
 use App\Http\Controllers\Backend\ContactController;
+use App\Http\Controllers\Backend\CategoryController;
 use App\Http\Controllers\Backend\DashboardController;
-use App\Http\Middleware\IsAdmin;
 
 // Middleware-protected dashboard routes
 Route::middleware(['auth', IsAdmin::class])->group(function () {
@@ -43,8 +44,8 @@ Route::controller(FormController::class)->group(function () {
 });
 Route::get('/contact/index', [ContactController::class, 'index'])->name('contact.index');
 Route::delete('/contact/{id}', [ContactController::class, 'destroy'])->name('contact.destroy');
-Route::get('/buyer/index', [BuyerController::class, 'index'])->name('buyer.index');
-Route::delete('/buyer/{id}', [BuyerController::class, 'destroy'])->name('buyer.destroy');
+Route::get('/category/create', [CategoryController::class, 'create'])->name('category.create');
+Route::post('/category/store', [CategoryController::class, 'submit'])->name('category.store');
 Route::get('/vendor/index', [VendorController::class, 'index'])->name('vendor.index');
 Route::delete('/vendor/{id}', [VendorController::class, 'destroy'])->name('vendor.destroy');
 Route::get('/team/index', [TeamController::class, 'index'])->name('team.index');
