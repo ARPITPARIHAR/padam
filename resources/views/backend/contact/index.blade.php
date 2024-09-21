@@ -14,7 +14,6 @@
 @endsection
 
 @section('content')
-    <!-- Add Bootstrap CSS for styling and responsiveness -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <style>
@@ -23,6 +22,13 @@
         }
         .table th, .table td {
             text-align: center;
+            vertical-align: middle;
+        }
+        .message-cell {
+            max-width: 200px; /* Set max width for the cell */
+            white-space: normal; /* Allow line breaks */
+            overflow: hidden; /* Hide overflow */
+            text-align: left; /* Align text to the left */
         }
         .btn-delete {
             background-color: #800000;
@@ -49,14 +55,21 @@
                         <td>{{ $loop->iteration + ($samples->currentPage() - 1) * $samples->perPage() }}</td>
                         <td>{{ $sample->name }}</td>
                         <td>{{ $sample->email }}</td>
-                        <td>{{ $sample->message }}</td>
+                        <td class="message-cell">
+                            @php
+                                $words = explode(' ', $sample->message);
+                                $firstLine = implode(' ', array_slice($words, 0, 20));
+                                $remaining = implode(' ', array_slice($words, 20));
+                            @endphp
+                            {{ $firstLine }}<br>
+                            @if($remaining)
+                                {{ $remaining }}
+                            @endif
+                        </td>
                         <td>
-                            <!-- Delete Button Triggering Modal -->
                             <button type="button" class="btn btn-sm btn-delete" data-bs-toggle="modal" data-bs-target="#deleteModal{{ $sample->id }}">
                                 Delete
                             </button>
-
-                            <!-- Delete Confirmation Modal -->
                             <div class="modal fade" id="deleteModal{{ $sample->id }}" tabindex="-1" aria-labelledby="deleteModalLabel{{ $sample->id }}" aria-hidden="true">
                                 <div class="modal-dialog">
                                     <div class="modal-content rounded-0">
@@ -84,13 +97,11 @@
             </tbody>
         </table>
 
-        <!-- Pagination Links -->
         <div class="d-flex justify-content-center">
             {{ $samples->links('pagination::bootstrap-5') }}
         </div>
     </div>
 
-    <!-- Add Bootstrap JS for any interactive components -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 @endsection
 
