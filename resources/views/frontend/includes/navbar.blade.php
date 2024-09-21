@@ -35,9 +35,9 @@
                 <div class="navbar-nav mx-auto">
                     <a href="/" class="nav-item nav-link active">Home</a>
                     <a href="about" class="nav-item nav-link">About</a>
-                    <a href="participate" class="nav-item nav-link">Services</a>
-                    <a href="programme" class="nav-item nav-link">Programs</a>
-                    <a href="youtubeform" class="nav-item nav-link">Events</a>
+                    <a href="participate" class="nav-item nav-link">Participate</a>
+                    <a href="programme" class="nav-item nav-link">OurProgrammes</a>
+                    {{-- <a href="youtubeform" class="nav-item nav-link">Events</a> --}}
 
 
                     <div class="nav-item dropdown">
@@ -76,10 +76,10 @@ body {
     margin: 0; /* सभी स्क्रीन के लिए शुरुआती मार्जिन 0 सेट करें */
 }
 
-@media (min-width: 768px) { /* 768px से अधिक स्क्रीन साइज़ के लिए */
-    body {
-        margin-left: 210px;
-        margin-right: 210px;
-    }
+body {
+    margin-left: 210px;
+    margin-right: 210px;
+    /* Prevents any repetition */
 }
+
 </style>

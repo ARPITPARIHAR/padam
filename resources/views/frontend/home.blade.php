@@ -1202,6 +1202,24 @@
 
 
 
+@media (max-width: 768px) {
+    .custom-heading {
+        font-size: 1.8rem; /* Smaller font size for tablets */
+        padding: 0.4rem 0.8rem; /* Reduced padding for smaller screens */
+        margin-bottom: 0.8rem; /* Adjust margin for better spacing */
+    }
+}
+
+@media (max-width: 480px) {
+    .custom-heading {
+        font-size: 1.5rem; /* Even smaller font size for mobile */
+        padding: 0.3rem 0.6rem; /* Smaller padding */
+        margin-bottom: 0.6rem; /* Adjust bottom margin */
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2); /* Slightly smaller shadow on mobile */
+    }
+}
+
+
 </style>
 
 

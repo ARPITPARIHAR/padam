@@ -1,16 +1,16 @@
 @extends('backend.layouts.app')
 
-@section('meta_title', __('Participation Table'))
+@section('meta_title', __('Category Update'))
 
-@section('page_name', __('Participation Table'))
+@section('page_name', __('Category Update'))
 
-@section('page_description', __('This is the participation table page displaying all records.'))
+{{-- @section('page_description', __('This is the participation table page displaying all records.')) --}}
 
 @section('name')
     <li class="breadcrumb-item">
         <a href="{{ route('dashboard') }}"> <i class="feather icon-home"></i> </a>
     </li>
-    <li class="breadcrumb-item"><a href="#!">{{ __('Participation') }}</a></li>
+    <li class="breadcrumb-item"><a href="#!">{{ __('CATEGORY UPDATE') }}</a></li>
 @endsection
 
 @section('content')
