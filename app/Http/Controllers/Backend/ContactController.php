@@ -12,7 +12,7 @@ class ContactController extends Controller
 
     public function index()
     {
-        $samples = Contact::paginate(10); // Example: Paginate with 10 contacts per page
+        $samples = Contact::paginate(5); // Example: Paginate with 10 contacts per page
 
         return view('backend.contact.index', compact('samples'));
     }

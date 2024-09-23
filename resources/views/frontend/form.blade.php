@@ -168,10 +168,10 @@
 </head>
 <body>
 
-<div class="container" style="width:100%; background:#e0f7fa;
+<div class="container" style="width:100%; background-image:url('img/0.jpg')
 ">
     <div class="row justify-content-center">
-        <div class="col-lg-8">
+        <div class="col-lg-8">'
             <div class="participation-form-container">
                 <h class="participation-form-heading">Participate & Win Amazing Rewards!</h>
                 <form action="{{ route('form.submit') }}" method="POST"  >
@@ -197,22 +197,23 @@
                     </div> --}}
                     <div class="form-group">
                         <label for="age_group">Age Group:</label>
-                        <select class="form-control" name="age" id="age_group" required>
+                        <select class="form-control" name="age" id="age_group" required style="background-color: white !important; color: #000; border: 1px solid #ced4da;">
                             <option value="">Select Age Group</option>
                             <option value="5-15Age">5 to 15 years</option>
                             <option value="15+ Above">15 years and above</option>
                         </select>
                     </div>
-                    <div class="form-group">
-                        <label for="game_category">Video Category:</label>
-                        <select class="form-control" name="game_category" id="game_category" required>
-                            <option value="">Select Game Category</option>
-                            @foreach (\App\Models\Category::all() as $category)
-                                <option value="{{ $category->category }}">{{ $category->category }}</option>
-                            @endforeach
-                            <option value="custom">Choose Your Own</option>
-                        </select>
-                    </div>
+
+                                        <div class="form-group">
+                                            <label for="game_category">Video Category:</label>
+                                            <select class="form-control" name="game_category" id="game_category" required style="background-color: white !important; color: #000; border: 1px solid #ced4da;">
+                                                <option value="">Select Game Category</option>
+                                                @foreach (\App\Models\Category::all() as $category)
+                                                    <option value="{{ $category->category }}">{{ $category->category }}</option>
+                                                @endforeach
+                                                <option value="custom">Choose Your Own</option>
+                                            </select>
+                                        </div>
 
                     <div class="form-group" id="custom_category_group" style="display:none;">
                         <label for="custom_category">Enter Your Own Category:</label>

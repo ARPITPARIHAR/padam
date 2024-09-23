@@ -76,10 +76,11 @@ body {
     margin: 0; /* सभी स्क्रीन के लिए शुरुआती मार्जिन 0 सेट करें */
 }
 
-body {
-    margin-left: 210px;
-    margin-right: 210px;
-    /* Prevents any repetition */
+@media (min-width: 768px) { /* For screens larger than 768px */
+    body {
+        margin-left: 210px;
+        margin-right: 210px;
+       /* Prevents the image from repeating */
+    }
 }
-
 </style>

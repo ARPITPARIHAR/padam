@@ -318,7 +318,7 @@
 @media (max-width: 480px) {
     .btn-lang {
         padding: 8px 16px; /* Smaller padding for smaller screens */
-        font-size: 14px; /* Adjust button text size */
+        font-size: 16px; /* Adjust button text size */
     }
 
     .card h2, .card h3 {
