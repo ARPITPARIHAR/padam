@@ -344,10 +344,25 @@
 
         </style>
 
+        <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var typed = new Typed('#typed-words', {
+            strings: ["Diwali Competition 2024"], // Add the words you want to display
+            typeSpeed: 80,
+            backSpeed: 60,
+            loop: true // Makes it repeat
+        });
+    });
+</script>
+
+
         <div class="container-fluids py-5 about" style="background-image: url('img/2.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
             <!-- Language Selector -->
 
-            <h5 class=" custom-heading">Creators India YouTube Video Diwali Competition 2024</h5>
+            <h5 class="custom-heading">Creators India YouTube Video
+    <span id="typed-words" class="typed-words"></span>
+</h5>
+
             {{-- <div class="language-selector">
                 <button class="btn-lang" onclick="showContent('english')">English</button>
                 <button class="btn-lang" onclick="showContent('hindi')">Hindi</button>
@@ -1223,6 +1238,8 @@
 </style>
 
 
+
+
 @endsection
 @section('style')
 
@@ -1230,3 +1247,4 @@
 @section('script')
 
 @endsection
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>

@@ -87,6 +87,7 @@
             padding: 10px 0;
             width: 100%;
         }
+
     }
 </style>
 <div class="modal fade" id="participateModal" tabindex="-1" aria-labelledby="participateModalLabel" aria-hidden="true">
@@ -118,22 +119,23 @@
                                     </div>
                                     <div class="form-group">
                                         <label for="age_group">Age Group:</label>
-                                        <select class="form-control" name="age" id="age_group" required>
+                                        <select class="form-control" name="age" id="age_group" required style="background-color: white !important; color: #000; border: 1px solid #ced4da;">
                                             <option value="">Select Age Group</option>
                                             <option value="5-15Age">5 to 15 years</option>
                                             <option value="15+ Above">15 years and above</option>
                                         </select>
                                     </div>
-                                    <div class="form-group">
-                                        <label for="game_category">Video Category:</label>
-                                        <select class="form-control" name="game_category" id="game_category" required>
-                                            <option value="">Select Game Category</option>
-                                            @foreach (\App\Models\Category::all() as $category)
-                                                <option value="{{ $category->category }}">{{ $category->category }}</option>
-                                            @endforeach
-                                            <option value="custom">Choose Your Own</option>
-                                        </select>
-                                    </div>
+
+                                                        <div class="form-group">
+                                                            <label for="game_category">Video Category:</label>
+                                                            <select class="form-control" name="game_category" id="game_category" required style="background-color: white !important; color: #000; border: 1px solid #ced4da;">
+                                                                <option value="">Select Game Category</option>
+                                                                @foreach (\App\Models\Category::all() as $category)
+                                                                    <option value="{{ $category->category }}">{{ $category->category }}</option>
+                                                                @endforeach
+                                                                <option value="custom">Choose Your Own</option>
+                                                            </select>
+                                                        </div>
                                     <div class="form-group" id="custom_category_group" style="display:none;">
                                         <label for="custom_category">Enter Your Own Category:</label>
                                         <input type="text" class="form-control" name="custom_game_category" id="custom_category" placeholder="Enter your category">
@@ -162,7 +164,8 @@
 
 @if(session('success'))
 <div id="flashMessage" class="flash-message">
-    <img src="{{ asset('Img/successful.png') }}" alt="Success">
+    <img src="/img/successful.png" alt="Success">
+
     <h2><strong>Thank You!!!</strong></h2>
     <p>{{ session('success') }}</p>
     <button onclick="closeFlashMessage()">Close</button>
@@ -327,7 +330,7 @@
     border: none;
     color: white;
     padding: 10px 20px;
-    font-size: 16px;
+    font-size: 18px;
     cursor: pointer;
     border-radius: 5px;
 }

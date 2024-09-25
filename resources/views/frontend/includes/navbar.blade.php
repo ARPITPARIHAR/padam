@@ -37,18 +37,18 @@
                     <a href="about" class="nav-item nav-link">About</a>
                     <a href="participate" class="nav-item nav-link">Participate</a>
                     <a href="programme" class="nav-item nav-link">OurProgrammes</a>
-                    {{-- <a href="youtubeform" class="nav-item nav-link">Events</a> --}}
+                     <a href="youtubeform" class="nav-item nav-link">Events</a>
 
-
+{{--
                     <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
-                        <div class="dropdown-menu m-0 bg-secondary rounded-0">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a> --}}
+                        {{-- <div class="dropdown-menu m-0 bg-secondary rounded-0">
                             <a href="blog.html" class="dropdown-item">Our Blog</a>
                             <a href="team.html" class="dropdown-item">Our Team</a>
                             <a href="testimonial.html" class="dropdown-item">Testimonial</a>
                             <a href="404.html" class="dropdown-item">404 Page</a>
-                        </div>
-                    </div>
+                        </div> --}}
+                    {{-- </div> --}}
                     <a href="contact" class="nav-item nav-link">Contact</a>
                 </div>
                 <div class="d-flex me-4">
@@ -80,6 +80,10 @@ body {
     body {
         margin-left: 210px;
         margin-right: 210px;
+        background-image: url('img/111.jpg');
+        background-repeat: no-repeat; /* Prevents the image from repeating */
+        background-size: cover; /* Ensures the image covers the entire background */
+        background-position: center; 
        /* Prevents the image from repeating */
     }
 }

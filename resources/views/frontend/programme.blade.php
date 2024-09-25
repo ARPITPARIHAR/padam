@@ -115,7 +115,7 @@
                     </div>
                     <div class="program-text bg-white px-4 pb-3">
                         <div class="program-text-inner">
-                            <a href="#" class="h4">Satolia (Seven Stones)</a>
+                            <a href="#" class="h4">Satolia(Seven Stones)</a>
 
                         </div>
                     </div>
@@ -152,7 +152,7 @@
                     </div>
                     <div class="program-text bg-white px-4 pb-3">
                         <div class="program-text-inner">
-                            <a href="#" class="h4">Dancing to Fun Songs</a>
+                            <a href="#" class="h4">Dancing Fun Songs</a>
 
                         </div>
                     </div>

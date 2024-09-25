@@ -20,7 +20,8 @@
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
     padding: 40px; /* Increased padding */
     box-sizing: border-box; /* Include padding and border in total width */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition effects */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 20px;/* Smooth transition effects */
     /* Center the card with vertical margins */
     width: 100%; /* Maximum width for the card */
    low the container to take up 90% of the width */
@@ -170,7 +171,7 @@
 
 <div class="container" style="width:100%; background-image:url('img/0.jpg')
 ">
-    <div class="row justify-content-center">
+    <div class="row justify-content-center">)
         <div class="col-lg-8">'
             <div class="participation-form-container">
                 <h class="participation-form-heading">Participate & Win Amazing Rewards!</h>
@@ -252,7 +253,8 @@
 
 @if(session('success'))
 <div id="flashMessage" class="flash-message">
-  <img src="{{ asset('Img/successful.png') }}" alt="Success">
+    <img src="/img/successful.png" alt="Success">
+
   <h2><strong>Thank You!!!</strong></h2>
   <p>{{ session('success') }}</p>
   <button onclick="closeFlashMessage()">Close</button>

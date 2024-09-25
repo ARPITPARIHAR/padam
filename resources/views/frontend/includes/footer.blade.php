@@ -4,11 +4,10 @@
             <div class="col-md-6 col-lg-4 col-xl-4">
                 <div class="footer-item">
                     <h4 class=" mb-4 border-bottom border-primary border-2 d-inline-block p-2 title-border-radius">Creators India</h4>
-                    <p class="mb-4" style="color: black;">
+                    <p class="mb-4 text-center text-md-start" style="color: black;">
                         Join exciting events and showcase your skills! Compete in thrilling challenges, earn rewards, and climb the leaderboard.
                         It's your time to shine – play, win, and get rewarded! <br> Be a part of the community and experience the excitement like never before!
-                     </p>
-
+                      </p>
 
                     {{-- <div class="border border-primary p-3 rounded bg-light">
                         <h5 class="mb-3">Newsletter</h5>
@@ -196,3 +195,21 @@
     width: 65px;
 }
 </style>
+<style>
+    p {
+      font-size: 16px;
+    }
+
+    @media (max-width: 768px) {
+      p {
+        font-size: 14px; /* Smaller font size on smaller screens */
+        padding: 0 10px; /* Add padding to prevent text from sticking to the edge */
+      }
+    }
+
+    @media (min-width: 768px) {
+      p {
+        font-size: 18px; /* Larger font for bigger screens */
+      }
+    }
+  </style>
