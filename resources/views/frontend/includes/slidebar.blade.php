@@ -1,4 +1,4 @@
-<div class="container-fluid service py-5" style=" background: linear-gradient(to bottom, #85ffdc, #ecfffc, #FFC1C1);;margin: 0 !important;">
+<div class="container-fluid service py-5" style=" background: linear-gradient(to bottom, white, #ecfffc, #fff7a0);;margin: 0 !important;">
     <div class="row g-0 align-items-start flex-column flex-lg-row" style="height: auto;">
         <!-- Image column -->
         <div class="col-lg-6 col-12 wow fadeIn" data-wow-delay="0.1s" style="padding: 0;">

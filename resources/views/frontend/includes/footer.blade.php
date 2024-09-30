@@ -6,7 +6,7 @@
                     <h4 class=" mb-4 border-bottom border-primary border-2 d-inline-block p-2 title-border-radius">Creators India</h4>
                     <p class="mb-4 text-center text-md-start" style="color: black;">
                         Join exciting events and showcase your skills! Compete in thrilling challenges, earn rewards, and climb the leaderboard.
-                        It's your time to shine – play, win, and get rewarded! <br> Be a part of the community and experience the excitement like never before!
+                        It's your time to shine – play, win, and get rewarded! Be a part of the community and experience the excitement like never before!
                       </p>
 
                     {{-- <div class="border border-primary p-3 rounded bg-light">
@@ -194,22 +194,34 @@
     z-index: 999;
     width: 65px;
 }
+p {
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  p {
+    font-size: 14px;
+    padding: 10px 20px; /* Better padding to prevent overflow */
+    /* Center text for better appearance */
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1200px) {
+  p {
+    font-size: 14px; /* Adjust font for medium screens */
+    padding: 0 30px; /* Extra padding for middle screens */
+  }
+}
+
+@media (min-width: 1200px) {
+  p {
+    font-size: 14px;
+    padding: 0 40px; /* Larger padding for bigger screens */
+  }
+}
+
+
+
+
 </style>
-<style>
-    p {
-      font-size: 16px;
-    }
 
-    @media (max-width: 768px) {
-      p {
-        font-size: 14px; /* Smaller font size on smaller screens */
-        padding: 0 10px; /* Add padding to prevent text from sticking to the edge */
-      }
-    }
-
-    @media (min-width: 768px) {
-      p {
-        font-size: 18px; /* Larger font for bigger screens */
-      }
-    }
-  </style>
