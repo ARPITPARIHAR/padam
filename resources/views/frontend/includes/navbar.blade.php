@@ -51,7 +51,7 @@
                     {{-- </div> --}}
                     <a href="contact" class="nav-item nav-link">Contact</a>
                 </div>
-                <div class="d-flex me-4">
+                {{-- <div class="d-flex me-4">
                     <div id="phone-tada" class="d-flex align-items-center justify-content-center">
                         <a href="" class="position-relative wow tada" data-wow-delay=".9s" >
                             <i class="fa fa-phone-alt text-primary fa-2x me-4"></i>
@@ -59,12 +59,12 @@
                                 <span><i class="fa fa-comment-dots text-secondary"></i></span>
                             </div>
                         </a>
-                    </div>
-                    <div class="d-flex flex-column pe-3 border-end border-primary">
+                    </div> --}}
+                    {{-- <div class="d-flex flex-column pe-3 border-end border-primary">
                         <span class="text-primary">Have any questions?</span>
                         <a href="#"><span class="text-secondary"></span></a>
-                    </div>
-                </div>
+                    </div> --}}
+                {{-- </div> --}}
                 {{-- <button class="btn-search btn btn-primary btn-md-square rounded-circle" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fas fa-search text-white"></i></button> --}}
             </div>
         </nav>
@@ -83,7 +83,7 @@ body {
         background-image: url('img/111.jpg');
         background-repeat: no-repeat; /* Prevents the image from repeating */
         background-size: cover; /* Ensures the image covers the entire background */
-        background-position: center; 
+        background-position: center;
        /* Prevents the image from repeating */
     }
 }
