@@ -12,7 +12,7 @@
         <div class="page1-about-text">
             <div class="page1-about-t2">
                 <h1>
-                    Foundeds &nbsp; in &nbsp; 1992, &nbsp; Padams &nbsp;
+                    Founded &nbsp; in &nbsp; 1992, &nbsp; Padams &nbsp;
                     Group &nbsp; was &nbsp; started&nbsp; under &nbsp;
                     the &nbsp; guidance &nbsp; of &nbsp; Late &nbsp;
                     Shri &nbsp; Padmaramji &nbsp; Kularia.

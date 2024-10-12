@@ -265,3 +265,21 @@
 </script>
 
 
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        // Restore scroll position if available
+        const scrollPosition = localStorage.getItem('scrollPosition');
+        if (scrollPosition) {
+            window.scrollTo(0, scrollPosition);
+            localStorage.removeItem('scrollPosition');
+        }
+
+        // Save scroll position before navigating
+        const filterLinks = document.querySelectorAll('.size-filter a, .size-filter ul a');
+        filterLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                localStorage.setItem('scrollPosition', window.scrollY);
+            });
+        });
+    });
+</script>
