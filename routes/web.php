@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Artisan;
 use App\Http\Controllers\Admin\CsrController;
 use App\Http\Controllers\Admin\HomeController;
 use App\Http\Controllers\Admin\NewsController;
@@ -11,6 +12,13 @@ use App\Http\Controllers\User\UserProjectController;
 // Route::get('/', function () {
 //     return view('welcome');
 // });
+
+Route::get('/clear/{command}', function ($command) {
+    $response = Artisan::call($command);
+    dd($response);
+});
+
+
 
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/home', [UserProjectController::class, 'home'])->name('user.home');
