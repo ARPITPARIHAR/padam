@@ -3,6 +3,6 @@
 
 deployment:
   tasks:
-    - export DEPLOYPATH=/home1/padams95/public_html/
+    - export DEPLOYPATH=/home1/padams95/public_html/lara/
     - /bin/cp -r * $DEPLOYPATH
      

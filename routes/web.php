@@ -1,10 +1,12 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Admin\CsrController;
 use App\Http\Controllers\Admin\HomeController;
+use App\Http\Controllers\Admin\NewsController;
 use App\Http\Controllers\Admin\SectorController;
-use App\Http\Controllers\Admin\LocationController;
 use App\Http\Controllers\Admin\ProjectController;
+use App\Http\Controllers\Admin\LocationController;
 use App\Http\Controllers\User\UserProjectController;
 // Route::get('/', function () {
 //     return view('welcome');
@@ -57,4 +59,23 @@ Route::middleware(['isAdmin'])->group(function () {
     Route::post('/project/delete/{id}', [ProjectController::class, 'destroy'])->name('admin.project.delete');
     Route::post('/project/image/remove', [ProjectController::class, 'projectImageRemove']);
 
+
+
+    Route::get('/news/list', [NewsController::class, 'index'])->name('admin.news.index');
+    Route::get('/news/add', [NewsController::class, 'create'])->name('admin.news.add');
+    Route::post('/admin/news/store', [NewsController::class, 'store'])->name('admin.news.store');
+    Route::get('admin/news/edit/{id}', [NewsController::class, 'edit'])->name('admin.news.edit');
+    Route::put('admin/news/update/{id}', [NewsController::class, 'update'])->name('admin.news.update');
+    Route::post('/news/delete/{id}', [NewsController::class, 'destroy'])->name('admin.news.delete');
+
+    
+    Route::get('/csr/list', [CsrController::class, 'index'])->name('admin.csr.index');
+    Route::get('/csr/add', [CsrController::class, 'create'])->name('admin.csr.add');
+    Route::post('/admin/csr/store', [CsrController::class, 'store'])->name('admin.csr.store');
+    Route::get('admin/csr/edit/{id}', [CsrController::class, 'edit'])->name('admin.csr.edit');
+    Route::put('admin/csr/update/{id}', [CsrController::class, 'update'])->name('admin.csr.update');
+    Route::post('/csr/delete/{id}', [CsrController::class, 'destroy'])->name('admin.news.delete');
+  
+  
+ 
 });

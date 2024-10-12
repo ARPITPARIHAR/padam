@@ -140,10 +140,8 @@
                             <span class="nav-text"> Dashboard </span>
                         </a>
                     </li>
-
                     <li class="nav-item">
-                        <a class="nav-link menu-arrow" href="#sidebarProducts" data-bs-toggle="collapse" role="button"
-                            aria-expanded="false" aria-controls="sidebarProducts">
+                        <a class="nav-link menu-arrow" href="#sidebarProducts" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarProducts">
                             <span class="nav-icon">
                                 <iconify-icon icon="solar:box-bold-duotone"></iconify-icon>
                             </span>
@@ -160,14 +158,50 @@
                                 <li class="sub-nav-item">
                                     <a class="sub-nav-link" href="{{route('admin.location.list')}}">Locations</a>
                                 </li>
-                               
                             </ul>
                         </div>
                     </li>
-
                     <li class="nav-item">
-                        <a class="nav-link menu-arrow" href="#sidebarCategory" data-bs-toggle="collapse" role="button"
-                            aria-expanded="false" aria-controls="sidebarCategory">
+                        <a class="nav-link menu-arrow" href="#sidebarNews" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarNews">
+                            <span class="nav-icon">
+                                <iconify-icon icon="solar:box-bold-duotone"></iconify-icon>
+                            </span>
+                            <span class="nav-text"> News Management</span>
+                        </a>
+                        <div class="collapse" id="sidebarNews">
+                            <ul class="nav sub-navbar-nav">
+                                <li class="sub-nav-item">
+                                    <a class="sub-nav-link" href="{{route('admin.news.index')}}">News List</a>
+                                </li>
+                                {{-- <li class="sub-nav-item">
+                                    <a class="sub-nav-link" href="{{route('admin.news.add')}}">Create News</a>
+                                </li> --}}
+                            </ul>
+                        </div>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link menu-arrow" href="#sidebarCsr" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarCsr">
+                            <span class="nav-icon">
+                                <iconify-icon icon="solar:box-bold-duotone"></iconify-icon>
+                            </span>
+                            <span class="nav-text"> Csr Management</span>
+                        </a>
+                        <div class="collapse" id="sidebarCsr">
+                            <ul class="nav sub-navbar-nav">
+                                <li class="sub-nav-item">
+                                    <a class="sub-nav-link" href="{{route('admin.csr.index')}}">Csr List</a>
+                                </li>
+                                {{-- <li class="sub-nav-item">
+                                    <a class="sub-nav-link" href="{{route('admin.csr.add')}}">Create CSR</a>
+                                </li> --}}
+                            </ul>
+                        </div>
+                    </li>
+                    
+                    
+                    <li class="nav-item">
+                        <a class="nav-link menu-arrow" href="#sidebarCategory" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarCategory">
                             <span class="nav-icon">
                                 <iconify-icon icon="solar:clipboard-list-bold-duotone"></iconify-icon>
                             </span>
@@ -187,10 +221,9 @@
                             </ul>
                         </div>
                     </li>
-
+                    
                     <li class="nav-item">
-                        <a class="nav-link menu-arrow" href="#sidebarInventory" data-bs-toggle="collapse" role="button"
-                            aria-expanded="false" aria-controls="sidebarInventory">
+                        <a class="nav-link menu-arrow" href="#sidebarInventory" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarInventory">
                             <span class="nav-icon">
                                 <iconify-icon icon="solar:box-bold-duotone"></iconify-icon>
                             </span>
@@ -198,7 +231,6 @@
                         </a>
                         <div class="collapse" id="sidebarInventory">
                             <ul class="nav sub-navbar-nav">
-
                                 <li class="sub-nav-item">
                                     <a class="sub-nav-link" href="inventory-warehouse.html">Warehouse</a>
                                 </li>
@@ -208,10 +240,9 @@
                             </ul>
                         </div>
                     </li>
-
+                    
                     <li class="nav-item">
-                        <a class="nav-link menu-arrow" href="#sidebarOrders" data-bs-toggle="collapse" role="button"
-                            aria-expanded="false" aria-controls="sidebarOrders">
+                        <a class="nav-link menu-arrow" href="#sidebarOrders" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarOrders">
                             <span class="nav-icon">
                                 <iconify-icon icon="solar:bag-smile-bold-duotone"></iconify-icon>
                             </span>
@@ -219,7 +250,6 @@
                         </a>
                         <div class="collapse" id="sidebarOrders">
                             <ul class="nav sub-navbar-nav">
-
                                 <li class="sub-nav-item">
                                     <a class="sub-nav-link" href="orders-list.html">List</a>
                                 </li>
@@ -235,6 +265,9 @@
                             </ul>
                         </div>
                     </li>
+                    
+                    
+                       
                 </ul>
             </div>
         </div>
