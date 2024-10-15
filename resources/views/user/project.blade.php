@@ -108,16 +108,58 @@
             </div>
             @endforeach
         </div>
+      
+    
+        <div class="load-more-container">
+            @if ($projects->hasMorePages())
+                <button id="loadMore" class="load-more-btn">Load More</button>
+            @endif
+        </div>
+        
     </div>
+    
 </div>
-<div class="show-all-projects default-top-margin">
+
+
+</div>
+
+{{-- <div class="show-all-projects default-top-margin">
     <h1>
         See More Projects
-        <i class="fa-solid fa-arrow-right fa-flip" style="color: #d64343; margin-left: 10px"></i>
+        <a href="" style="text-decoration: none; color: inherit;">
+            <i class="fa-solid fa-arrow-right fa-bounce" style="color: #d64343; margin-left: 10px;"></i>
+        </a>
     </h1>
-</div>
+</div> --}}
+
 @include('user.layouts.footer')
 @endsection
+<script>
+    document.getElementById('loadMore').addEventListener('click', function() {
+        const nextPage = {{ $projects->currentPage() + 1 }};
+        const totalPages = {{ $projects->lastPage() }};
+
+        if (nextPage <= totalPages) {
+            fetch(`{{ route('user.project') }}?page=${nextPage}`)
+                .then(response => response.text())
+                .then(data => {
+                    const parser = new DOMParser();
+                    const doc = parser.parseFromString(data, 'text/html');
+                    const newProjects = doc.querySelector('.project-card-main-section').innerHTML;
+
+                    document.querySelector('.project-card-main-section').insertAdjacentHTML('beforeend', newProjects);
+
+                    if (nextPage >= totalPages) {
+                        document.querySelector('.load-more').style.display = 'none'; // Hide button if no more pages
+                    }
+                })
+                .catch(error => console.error('Error loading more projects:', error));
+        }
+    });
+</script>
+
+
+
 
 <script>
     document.addEventListener("DOMContentLoaded", () => {
@@ -283,3 +325,42 @@
         });
     });
 </script>
+
+
+<style>
+.load-more-container {
+    text-align: center; /* Center the button */
+    margin: 40px 0;    /* Add margin for spacing */
+}
+
+.load-more-btn {
+    background: linear-gradient(135deg, #6a11cb, #2575fc); /* Gradient background */
+    color: white;               /* Text color */
+    border: none;               /* No border */
+    padding: 10px 20px;        /* Padding for button size */
+    font-size: 16px;           /* Font size */
+    font-weight: bold;         /* Bold text */
+    border-radius: 30px;      /* Rounded corners */
+    cursor: pointer;           /* Pointer cursor on hover */
+    transition: all 0.3s ease; /* Smooth transition for effects */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Shadow for depth */
+    max-width: 200px;          /* Limit max width of the button */
+    margin: 0 auto;            /* Center the button */
+    display: inline-block;     /* Inline-block to respect width */
+}
+
+.load-more-btn:hover {
+    transform: translateY(-2px); /* Lift effect on hover */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4); /* Enhanced shadow on hover */
+}
+
+.load-more-btn:focus {
+    outline: none; /* Remove default focus outline */
+}
+
+.load-more-btn:active {
+    transform: translateY(1px); /* Press effect on click */
+}
+
+
+</style>

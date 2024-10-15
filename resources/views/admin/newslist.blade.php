@@ -32,8 +32,8 @@
                                     <td style="font-size: 16px;"> <!-- Adjusted font size -->
                                         <a href="#!" class="text-dark fw-medium">{{ $item->name }}</a>
                                     </td>
-                                    <td>
-                                        <img src="{{ asset($item->image) }}" alt="{{ $item->name }}" class="avatar-md">
+                                    <td>         
+                                        <img src="{{asset($item->image) }}" alt="{{ $item->name }}" class="avatar-md">
                                     </td>
                                     <td style="font-size: 16px;"> <!-- Adjusted font size -->
                                         <p class="text-muted mb-0 mt-1 fs-13">{{ $item->description }}</p>
